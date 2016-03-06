@@ -1,0 +1,26 @@
+21:58:06 **** Build of configuration gcc-debug for project tictoc ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+txc1.cc
+txc10.cc
+txc11.cc
+txc12.cc
+txc13.cc
+txc14.cc
+txc15.cc
+txc16.cc
+txc2.cc
+txc3.cc
+txc4.cc
+txc5.cc
+txc6.cc
+txc7.cc
+txc8.cc
+txc9.cc
+tictoc13_m.cc
+tictoc14_m.cc
+tictoc15_m.cc
+tictoc16_m.cc
+Creating executable: out/gcc-debug//tictoc.exe
+
+21:58:35 Build Finished (took 28s.617ms)
+
