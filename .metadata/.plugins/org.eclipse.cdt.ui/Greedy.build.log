@@ -1,14 +1,23 @@
-01:00:33 **** Incremental Build of configuration gcc-debug for project Greedy ****
+01:50:55 **** Incremental Build of configuration gcc-debug for project Greedy ****
 make MODE=debug CONFIGNAME=gcc-debug all 
-GeoPlus.cc
-GeoPlus.cc: In member function 'virtual void GeoPlus::findBaseNode()':
-GeoPlus.cc:254:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (unsigned int i = 0; i < c; i++) {
-                                   ^
-GeoPlus.cc:162:30: warning: unused variable 'm' [-Wunused-variable]
-        unsigned int i, j, n, m;
-                              ^
+GeoNode.cc
+GeoNode.cc: In member function 'void GeoNode::pointNode(GeoNode, int, int, double*, double*)':
+GeoNode.cc:58:12: warning: unused variable 'x1' [-Wunused-variable]
+     double x1,x2,emp1,emp2,x;
+            ^
+GeoNode.cc:58:15: warning: unused variable 'x2' [-Wunused-variable]
+     double x1,x2,emp1,emp2,x;
+               ^
+GeoNode.cc:58:18: warning: unused variable 'emp1' [-Wunused-variable]
+     double x1,x2,emp1,emp2,x;
+                  ^
+GeoNode.cc:58:23: warning: unused variable 'emp2' [-Wunused-variable]
+     double x1,x2,emp1,emp2,x;
+                       ^
+GeoNode.cc:58:28: warning: unused variable 'x' [-Wunused-variable]
+     double x1,x2,emp1,emp2,x;
+                            ^
 Creating executable: out/gcc-debug//Greedy.exe
 
-01:00:35 Build Finished (took 2s.880ms)
+01:50:57 Build Finished (took 1s.627ms)
 

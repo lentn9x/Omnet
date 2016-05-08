@@ -1,0 +1,5 @@
+16:44:52 **** Incremental Build of configuration gcc-debug for project Greedy_Coverage ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+
+16:44:53 Build Finished (took 234ms)
+
