@@ -1,24 +1,14 @@
-19:53:31 **** Incremental Build of configuration gcc-debug for project Greedy ****
+01:00:33 **** Incremental Build of configuration gcc-debug for project Greedy ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 GeoPlus.cc
-In file included from E:/Software/omnetpp-4.6/include/ccomponent.h:25:0,
-                 from E:/Software/omnetpp-4.6/include/omnetpp.h:26,
-                 from ../MiXiM/src/base/modules/BaseModule.h:25,
-                 from GeoPlus.cc:1:
-E:/Software/omnetpp-4.6/include/cenvir.h: In instantiation of 'cEnvir& cEnvir::operator<<(const T&) [with T = GeoNode]':
-GeoPlus.cc:226:52:   required from here
-E:/Software/omnetpp-4.6/include/cenvir.h:522:62: error: cannot bind 'std::ostream {aka std::basic_ostream<char>}' lvalue to 'std::basic_ostream<char>&&'
-     template<typename T> cEnvir& operator<<(const T& t) {out << t; return *this;}
-                                                              ^
-In file included from E:/Software/omnetpp-4.6/tools/win32/mingw32/include/c++/4.9.2/istream:39:0,
-                 from E:/Software/omnetpp-4.6/tools/win32/mingw32/include/c++/4.9.2/sstream:38,
-                 from ../MiXiM/src/base/modules/BaseModule.h:24,
-                 from GeoPlus.cc:1:
-E:/Software/omnetpp-4.6/tools/win32/mingw32/include/c++/4.9.2/ostream:602:5: note: initializing argument 1 of 'std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&&, const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Tp = GeoNode]'
-     operator<<(basic_ostream<_CharT, _Traits>&& __os, const _Tp& __x)
-     ^
-make: *** [out/gcc-debug//GeoPlus.o] Error 1
-Makefile:128: recipe for target 'out/gcc-debug//GeoPlus.o' failed
+GeoPlus.cc: In member function 'virtual void GeoPlus::findBaseNode()':
+GeoPlus.cc:254:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (unsigned int i = 0; i < c; i++) {
+                                   ^
+GeoPlus.cc:162:30: warning: unused variable 'm' [-Wunused-variable]
+        unsigned int i, j, n, m;
+                              ^
+Creating executable: out/gcc-debug//Greedy.exe
 
-19:53:34 Build Finished (took 3s.435ms)
+01:00:35 Build Finished (took 2s.880ms)
 

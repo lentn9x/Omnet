@@ -99,6 +99,7 @@ void GeoBasic::handleUpperMsg(cMessage* msg)
         GreedyPkt* greedyPkt;
         greedyPkt =  static_cast<GreedyPkt*>(encapsMsg(static_cast<cPacket*> (msg)));
         greedyPkt->setName("GreedyPkt");
+        EV << "da vao goi tin" << endl;
         GeoNode *destNode = new GeoNode();
         destNode->nodeID = par("destId").longValue();
         destNode->locationX = par("destX").doubleValue();

@@ -23,6 +23,7 @@
 <includePath path="D:\Omnet\MiXiM\examples\ieee802154Narrow"/>
 <includePath path="D:\Omnet\MiXiM\examples\bmac"/>
 <includePath path="D:\Omnet\MiXiM\examples\baseNetwork"/>
+<includePath path="D:\Omnet\MiXiM\examples\baseNetwork\results"/>
 <includePath path="D:\Omnet\MiXiM\examples\analogueModels"/>
 <includePath path="D:\Omnet\MiXiM\examples\WSNRouting"/>
 <includePath path="D:\Omnet\MiXiM\examples\Mac80211"/>
