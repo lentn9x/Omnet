@@ -77,24 +77,25 @@ void GeoNode::pointNode(GeoNode a,int z, int r, double* px1, double* py1){
 }
 
 double GeoNode::degNode(GeoNode a){
-    double d = -atan((a.locationY - locationY)/(a.locationX - locationX))*(180/3.14);
-    if ((locationX < a.locationX) && (locationY < a.locationY)) {
-        d = 360 + d;
-    } else if ((locationX > a.locationX) && (locationY < a.locationY)) {
-        d = 180 + d;
-    } else if ((locationX > a.locationX) && (locationY > a.locationY)) {
-        d = 180 + d;
-    } else if ((locationX < a.locationX) && (locationY > a.locationY)) {
-        d = d;
-    } else if ((locationX < a.locationX) && (locationY = a.locationY)) {
-        d = 0;
-    } else if ((locationX > a.locationX) && (locationY = a.locationY)) {
-        d = 180;
-    } else if ((locationX = a.locationX) && (locationY > a.locationY)) {
-        d = 90;
-    } else if ((locationX = a.locationX) && (locationY < a.locationY)) {
-        d = 270;
+    double d = atan((a.locationY - locationY)/(a.locationX - locationX))*(180/3.14);
+    if ((locationX <= a.locationX) && (locationY < a.locationY)) {
+        d = 360 - d;
+    } else if ((locationX > a.locationX) && (locationY <= a.locationY)) {
+        d = 180 - d;
+    } else if ((locationX > a.locationX) && (locationY >= a.locationY)) {
+        d = 180 - d;
+    } else if ((locationX <= a.locationX) && (locationY > a.locationY)) {
+        d = -d;
     }
+//    else if ((locationX < a.locationX) && (locationY = a.locationY)) {
+//        d = 0;
+//    } else if ((locationX > a.locationX) && (locationY = a.locationY)) {
+//        d = 180;
+//    } else if ((locationX = a.locationX) && (locationY > a.locationY)) {
+//        d = 90;
+//    } else if ((locationX = a.locationX) && (locationY < a.locationY)) {
+//        d = 270;
+//    }
     if (d == 360)
         {d = 0 ;}
     return d;

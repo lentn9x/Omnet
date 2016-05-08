@@ -10,7 +10,7 @@ network GeoRoutingNetwork1 extends BaseNetwork
     submodules:
 
         node1: Host802154 {
-            @display("p=380,204;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=402,214;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node2: Host802154 {
             @display("p=321,256;i=misc/node2,,0;b=3,5;is=vs;i2=-");
@@ -31,10 +31,10 @@ network GeoRoutingNetwork1 extends BaseNetwork
             @display("p=321,342;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node8: Host802154 {
-            @display("p=299,114;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=306,173;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node9: Host802154 {
-            @display("p=242,204;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=242,214;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node10: Host802154 {
             @display("p=160,342;i=misc/node2,,0;b=3,5;is=vs;i2=-");

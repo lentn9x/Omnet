@@ -1503,3 +1503,18 @@ Binding(CTRL+SHIFT+H,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.cdt.ui.cViewScope,,,system)
+
+!ENTRY org.omnetpp.launch 4 -805306369 2016-05-09 05:23:36.367
+!MESSAGE Run #0: Finished with Error
+
+!ENTRY org.omnetpp.launch 4 -805306369 2016-05-09 05:24:05.836
+!MESSAGE Run #0: Finished with Error
+
+!ENTRY org.omnetpp.launch 4 -1073741819 2016-05-09 05:57:34.398
+!MESSAGE Run #0: Finished with Error
+
+!ENTRY org.omnetpp.launch 4 -805306369 2016-05-09 05:58:57.657
+!MESSAGE Run #0: Finished with Error
+
+!ENTRY org.omnetpp.launch 4 -805306369 2016-05-09 06:00:43.494
+!MESSAGE Run #0: Finished with Error
