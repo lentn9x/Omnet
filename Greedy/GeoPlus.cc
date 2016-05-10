@@ -208,7 +208,6 @@ void GeoPlus::findBaseNode(){
                    nbTable[i].chil_loca_x2 = px1[2 * i];
                    nbTable[i].chil_loca_y2 = py1[2 * i];
                }
-
            }
        }
 
@@ -241,7 +240,11 @@ void GeoPlus::findBaseNode(){
        for (unsigned int i = 0; i < nbTable.size(); i++) {
            EV << "danh sach gia tri : " << nbTable[count[i]].nodeID - 3 << " " << i << endl;
        }
-       for (unsigned int i = 1; i < nbTable.size()+1; i++) {
+       int p = nbTable.size();
+       if (p > 2){
+           p = p + 1;
+       }
+       for (unsigned int i = 1; i < p; i++) {
            int j = count[i-1], k = count[i];
            GeoNode a, b;
            if (i == nbTable.size()) {
@@ -252,13 +255,18 @@ void GeoPlus::findBaseNode(){
            b.locationX = nbTable[k].locationX;
            b.locationY = nbTable[k].locationY;
            double d = myNode.distant(a, b);
+           couple = 0;
            if (d > r) {
-               node1[c] = j;
-               node2[c] = k;
-               c = c + 1;
+               node1[couple] = j;
+               node2[couple] = k;
+               if (nbTable[k].deg - nbTable[j].deg > 180) {
+                   node1[couple] = k;
+                   node2[couple] = j;
+               }
+               couple = couple + 1;
            }
        }
-       for (unsigned int i = 0; i < c; i++) {
+       for (unsigned int i = 0; i < couple; i++) {
            EV << "Cap Node nbTable:" << endl;
            EV << nbTable[node1[i]].nodeID - 3 << "-"
                      << nbTable[node2[i]].nodeID - 3 << endl;
@@ -324,8 +332,8 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                     for (j = 0; j < routerSize; j++) {
                         EV << greedyPlusPkt->getRouter(j).nodeID - 3 << " -> ";
                     }
-//                    delete (greedyPlusPkt);
-//                    endSimulation();
+                    delete (greedyPlusPkt);
+                    endSimulation();
                 } else {
                     GeoNode* interNode = findNextNode(
                             greedyPlusPkt->getDestNode());
@@ -356,26 +364,26 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                         greedyPlusPkt->setRoute(routeSize,
                                 getParentModule()->getName());
 
-//                        GeoNode a, b;
-//
-//                        if (greedyPlusPkt->getRouterArraySize() == 0) {
-//                            a.locationX = myNode.locationX;
-//                            a.locationY = myNode.locationY;
-//                            a.nodeID = myNode.nodeID;
-//                            greedyPlusPkt->setBaseNode(a);
-//                            greedyPlusPkt->setRouterArraySize(1);
-//                            greedyPlusPkt->setRouter(0, a);
-//                        }
-//                        int k = node1[0];
-//                        b.locationX = nbTable[k].locationX;
-//                        b.locationY = nbTable[k].locationY;
-//                        b.nodeID = nbTable[k].nodeID;
+                        GeoNode a, b;
 
-                        //greedyPlusPkt->setInterNode(b);
+                        if ((greedyPlusPkt->getRouterArraySize() == 0) && (couple > 0)) {
+                            a.locationX = myNode.locationX;
+                            a.locationY = myNode.locationY;
+                            a.nodeID = myNode.nodeID;
+                            greedyPlusPkt->setBaseNode(a);
+                            greedyPlusPkt->setRouterArraySize(1);
+                            greedyPlusPkt->setRouter(0, a);
+                        }
+                        int k = node1[0];
+                        b.locationX = nbTable[k].locationX;
+                        b.locationY = nbTable[k].locationY;
+                        b.nodeID = nbTable[k].nodeID;
 
-//                        greedyPlusPkt->setRouterArraySize(
-//                                greedyPlusPkt->getRouterArraySize() + 1);
-//                        greedyPlusPkt->setRouter(greedyPlusPkt->getRouterArraySize() - 1, b);
+                        greedyPlusPkt->setInterNode(b);
+
+                        greedyPlusPkt->setRouterArraySize(
+                                greedyPlusPkt->getRouterArraySize() + 1);
+                        greedyPlusPkt->setRouter(greedyPlusPkt->getRouterArraySize() - 1, b);
 
 
                         setDownControlInfo(greedyPlusPkt,

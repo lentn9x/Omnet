@@ -1,4 +1,4 @@
-06:02:50 **** Incremental Build of configuration gcc-debug for project MiXiM ****
+21:34:17 **** Incremental Build of configuration gcc-debug for project MiXiM ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && /usr/bin/make
 make[1]: Entering directory '/d/Omnet/MiXiM/src'
@@ -6,14 +6,5 @@ make[1]: Leaving directory '/d/Omnet/MiXiM/src'
 cd examples && /usr/bin/make
 make[1]: Entering directory '/d/Omnet/MiXiM/examples'
 make[1]: Leaving directory '/d/Omnet/MiXiM/examples'
-06:02:52 **** Incremental Build of configuration gcc-debug for project Greedy ****
+21:34:19 **** Incremental Build of configuration gcc-debug for project Greedy ****
 make MODE=debug CONFIGNAME=gcc-debug all 
-GeoPlus.cc
-GeoPlus.cc: In member function 'virtual void GeoPlus::findBaseNode()':
-GeoPlus.cc:261:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for (unsigned int i = 0; i < c; i++) {
-                                   ^
-GeoPlus.cc:162:30: warning: unused variable 'm' [-Wunused-variable]
-        unsigned int i, j, n, m;
-                              ^
-Creating executable: out/gcc-debug//Greedy.exe

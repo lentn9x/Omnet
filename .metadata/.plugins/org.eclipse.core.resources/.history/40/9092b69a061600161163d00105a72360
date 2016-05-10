@@ -1,0 +1,44 @@
+package georouting;
+
+import org.mixim.base.modules.BaseNetwork;
+
+network GeoRoutingNetwork1 extends BaseNetwork
+{
+    parameters:
+        @display("bgb=1000,1000;bgl=2");
+
+    submodules:
+
+        node1: Host802154 {
+            @display("p=719,273;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node2: Host802154 {
+            @display("p=772,122;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node3: Host802154 {
+            @display("p=491,218;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node4: Host802154 {
+            @display("p=559,288;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node5: Host802154 {
+            @display("p=242,394;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node6: Host802154 {
+            @display("p=604,188;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node7: Host802154 {
+            @display("p=640,303;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node8: Host802154 {
+            @display("p=682,66;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node9: Host802154 {
+            @display("p=559,137;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node10: Host802154 {
+            @display("p=160,342;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+    connections allowunconnected:
+		//	all connections and gates are to be generated dynamically
+}

@@ -56,6 +56,7 @@ double GeoNode::distant(GeoNode a,GeoNode b){
 void GeoNode::pointNode(GeoNode a,int z, int r, double* px1, double* py1){
     double b,c,i,j,k,delta,y1,y2;
     double x1,x2,emp1,emp2,x;
+    r = 48;
     b = a.locationX - locationX;
     c = a.locationY - locationY;
     i = b*b + c*c;
@@ -87,15 +88,6 @@ double GeoNode::degNode(GeoNode a){
     } else if ((locationX <= a.locationX) && (locationY > a.locationY)) {
         d = -d;
     }
-//    else if ((locationX < a.locationX) && (locationY = a.locationY)) {
-//        d = 0;
-//    } else if ((locationX > a.locationX) && (locationY = a.locationY)) {
-//        d = 180;
-//    } else if ((locationX = a.locationX) && (locationY > a.locationY)) {
-//        d = 90;
-//    } else if ((locationX = a.locationX) && (locationY < a.locationY)) {
-//        d = 270;
-//    }
     if (d == 360)
         {d = 0 ;}
     return d;
