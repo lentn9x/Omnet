@@ -1,4 +1,4 @@
-22:36:34 **** Incremental Build of configuration gcc-debug for project MiXiM ****
+00:27:59 **** Incremental Build of configuration gcc-debug for project MiXiM ****
 make MODE=debug CONFIGNAME=gcc-debug all 
 cd src && /usr/bin/make
 make[1]: Entering directory '/d/Omnet/MiXiM/src'
@@ -7,5 +7,5 @@ cd examples && /usr/bin/make
 make[1]: Entering directory '/d/Omnet/MiXiM/examples'
 make[1]: Leaving directory '/d/Omnet/MiXiM/examples'
 
-22:36:35 Build Finished (took 576ms)
+00:27:59 Build Finished (took 585ms)
 

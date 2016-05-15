@@ -116,12 +116,12 @@ void GeoPlus::handleSelfMsg(cMessage *msg) {
 }
 
 void GeoPlus::handleUpperMsg(cMessage* msg) {
-//    if
+    if
 //    (par("isSourceNode").boolValue()
 //             &&
 //             (msg->getKind() == SensorApplLayer::DATA_MESSAGE) {
-//    (true)
-//    {
+    (true)
+    {
         GreedyPlusPkt* greedyPlusPkt;
         greedyPlusPkt = static_cast<GreedyPlusPkt*>(encapsMsg(
                 static_cast<cPacket*>(msg)));
@@ -154,9 +154,9 @@ void GeoPlus::handleUpperMsg(cMessage* msg) {
         EV << "ID node tiep theo: " << greedyPlusPkt->getInterNode().nodeID
                   << endl;
         EV << "Bat dau gui goi Greedy" << endl;
-//    } else {
-//        delete (msg);
-//    }
+    } else {
+        delete (msg);
+    }
 }
 
 void GeoPlus::findBaseNode() {

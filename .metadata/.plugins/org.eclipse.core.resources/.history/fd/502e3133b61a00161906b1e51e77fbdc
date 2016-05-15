@@ -111,17 +111,14 @@ void GeoPlus::handleSelfMsg(cMessage *msg) {
         setDownControlInfo(pkt, LAddress::L2BROADCAST);
         sendDown(pkt);
         nbUpdateCnt++;
-        EV<<"on handleSelfMsg"<<endl;
     }
 }
 
 void GeoPlus::handleUpperMsg(cMessage* msg) {
-//    if
+    if
 //    (par("isSourceNode").boolValue()
 //             &&
-//             (msg->getKind() == SensorApplLayer::DATA_MESSAGE) {
-//    (true)
-//    {
+             (msg->getKind() == SensorApplLayer::DATA_MESSAGE) {
         GreedyPlusPkt* greedyPlusPkt;
         greedyPlusPkt = static_cast<GreedyPlusPkt*>(encapsMsg(
                 static_cast<cPacket*>(msg)));
@@ -154,9 +151,9 @@ void GeoPlus::handleUpperMsg(cMessage* msg) {
         EV << "ID node tiep theo: " << greedyPlusPkt->getInterNode().nodeID
                   << endl;
         EV << "Bat dau gui goi Greedy" << endl;
-//    } else {
-//        delete (msg);
-//    }
+    } else {
+        delete (msg);
+    }
 }
 
 void GeoPlus::findBaseNode() {
@@ -368,9 +365,9 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                 greedyPlusPkt->setRoute(routeSize,
                         getParentModule()->getName());
                 EV << "couple" << couple << endl;
-                for (i = 0; i < couple; i++) {
+                //for (i = 0; i < couple; i++) {
 
-                    GreedyPlusPkt* clone = (GreedyPlusPkt*)greedyPlusPkt->dup();
+                    GreedyPlusPkt* clone = greedyPlusPkt;
                     GeoNode a, b;
 
                     if ((clone->getRouterArraySize() == 0) && (couple > 0)) {
@@ -382,7 +379,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                         clone->setRouter(0, a);
                     }
 
-                    int k = node1[i];
+                    int k = node1[0];
                     b.locationX = nbTable[k].locationX;
                     b.locationY = nbTable[k].locationY;
                     b.nodeID = nbTable[k].nodeID;
@@ -395,7 +392,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                     setDownControlInfo(clone, LAddress::L2BROADCAST);
                     sendDown(clone);
                     EV << "Chuyen tiep goi tin GreedyPlus" << endl;
-                }
+              //  }
             }
         }
     }

@@ -70,7 +70,7 @@ network = GeoRoutingNetwork1
 #**.node*.netwl.stats = false
 **.node*.netwl.headerLength = 4bit
 **.node5.netwl.isSourceNode = true
-**.node5.netwl.destId = 12
+**.node5.netwl.destId = 15
 **.node5.netwl.destX = 174m
 **.node5.netwl.destY = 130m
 ################ Mobility parameters #####################
