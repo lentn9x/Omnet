@@ -22,7 +22,7 @@ network GeoRoutingNetwork1 extends BaseNetwork
             @display("p=441,115;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node5: Host802154 {
-            @display("p=220,294;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=71,409;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node6: Host802154 {
             @display("p=518,294;i=misc/node2,,0;b=3,5;is=vs;i2=-");
@@ -37,31 +37,31 @@ network GeoRoutingNetwork1 extends BaseNetwork
             @display("p=391,189;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node10: Host802154 {
-            @display("p=59,359;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=189,322;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node11: Host802154 {
-            @display("p=355,381;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=337,366;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node12: Host802154 {
-            @display("p=299,320;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=116,351;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node13: Host802154 {
-            @display("p=133,320;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=337,448;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node14: Host802154 {
-            @display("p=334,438;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=267,322;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node15: Host802154 {
-            @display("p=59,423;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=174,130;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node16: Host802154 {
             @display("p=101,474;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node17: Host802154 {
-            @display("p=174,489;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=182,496;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node18: Host802154 {
-            @display("p=267,489;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=267,496;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
     connections allowunconnected:
 		//	all connections and gates are to be generated dynamically

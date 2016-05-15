@@ -115,8 +115,10 @@ void GeoPlus::handleSelfMsg(cMessage *msg) {
 }
 
 void GeoPlus::handleUpperMsg(cMessage* msg) {
-    if (par("isSourceNode").boolValue()
-            && msg->getKind() == SensorApplLayer::DATA_MESSAGE) {
+    if
+//    (par("isSourceNode").boolValue()
+//             &&
+             (msg->getKind() == SensorApplLayer::DATA_MESSAGE) {
         GreedyPlusPkt* greedyPlusPkt;
         greedyPlusPkt = static_cast<GreedyPlusPkt*>(encapsMsg(
                 static_cast<cPacket*>(msg)));
@@ -142,8 +144,6 @@ void GeoPlus::handleUpperMsg(cMessage* msg) {
         greedyPlusPkt->setInterNode(interNode);
         greedyPlusPkt->setLength(myNode.distance(interNode));
 
-
-
         greedyPlusPkt->setBitLength(headerLength);
         greedyPlusPkt->setDestAddr(LAddress::L3BROADCAST);
         sendDown(greedyPlusPkt);
@@ -156,121 +156,124 @@ void GeoPlus::handleUpperMsg(cMessage* msg) {
     }
 }
 
-void GeoPlus::findBaseNode(){
+void GeoPlus::findBaseNode() {
 
     double r = 48;
-       unsigned int i, j, n, m;
-       for (unsigned int i = 0; i < nbTable.size(); i++) {
-           myNode.pointNode(nbTable[i], i, r, px1, py1);
-       }
-       for (i = 0; i < nbTable.size(); i++)
-           nbTable[i].deg = myNode.degNode(nbTable[i]);
-       for (i = 0; i < nbTable.size(); i++)
-           center[i] = myNode.degNode(nbTable[i]);
-       for (i = 0; i < nbTable.size(); i++)
-           count[i] = i;
-       for (i = 0; i < nbTable.size(); i++) {
-           GeoNode a;
-           a.locationX = px1[2 * i];
-           a.locationY = py1[2 * i];
-           nbTable[i].chil_loca_x = px1[2 * i];
-           nbTable[i].chil_loca_y = py1[2 * i];
-           shadow[2 * i] = myNode.degNode(a);
-           nbTable[i].chil_deg_1 = myNode.degNode(a);
-           a.locationX = px1[2 * i + 1];
-           a.locationY = py1[2 * i + 1];
-           nbTable[i].chil_loca_x2 = px1[2 * i + 1];
-           nbTable[i].chil_loca_y2 = py1[2 * i + 1];
-           shadow[2 * i + 1] = myNode.degNode(a);
-           nbTable[i].chil_deg_2 = myNode.degNode(a);
+    unsigned int i, j, n, m;
+    for (unsigned int i = 0; i < nbTable.size(); i++) {
+        myNode.pointNode(nbTable[i], i, r, px1, py1);
+    }
+    for (i = 0; i < nbTable.size(); i++)
+        nbTable[i].deg = myNode.degNode(nbTable[i]);
+    for (i = 0; i < nbTable.size(); i++)
+        center[i] = myNode.degNode(nbTable[i]);
+    for (i = 0; i < nbTable.size(); i++)
+        count[i] = i;
+    for (i = 0; i < nbTable.size(); i++) {
+        GeoNode a;
+        a.locationX = px1[2 * i];
+        a.locationY = py1[2 * i];
+        nbTable[i].chil_loca_x = px1[2 * i];
+        nbTable[i].chil_loca_y = py1[2 * i];
+        shadow[2 * i] = myNode.degNode(a);
+        nbTable[i].chil_deg_1 = myNode.degNode(a);
+        a.locationX = px1[2 * i + 1];
+        a.locationY = py1[2 * i + 1];
+        nbTable[i].chil_loca_x2 = px1[2 * i + 1];
+        nbTable[i].chil_loca_y2 = py1[2 * i + 1];
+        shadow[2 * i + 1] = myNode.degNode(a);
+        nbTable[i].chil_deg_2 = myNode.degNode(a);
 
-           if (nbTable[i].chil_deg_1 > nbTable[i].chil_deg_2) {
-               if (nbTable[i].chil_deg_1 - nbTable[i].chil_deg_2 > 180) {
-                   double k;
-                   k = nbTable[i].chil_deg_1;
-                   nbTable[i].chil_deg_1 = nbTable[i].chil_deg_2;
-                   nbTable[i].chil_deg_2 = k;
-                   nbTable[i].chil_loca_x = px1[2 * i + 1];
-                   nbTable[i].chil_loca_y = py1[2 * i + 1];
-                   nbTable[i].chil_loca_x2 = px1[2 * i];
-                   nbTable[i].chil_loca_y2 = py1[2 * i];
-               }
+        if (nbTable[i].chil_deg_1 > nbTable[i].chil_deg_2) {
+            if (nbTable[i].chil_deg_1 - nbTable[i].chil_deg_2 > 180) {
+                double k;
+                k = nbTable[i].chil_deg_1;
+                nbTable[i].chil_deg_1 = nbTable[i].chil_deg_2;
+                nbTable[i].chil_deg_2 = k;
+                nbTable[i].chil_loca_x = px1[2 * i + 1];
+                nbTable[i].chil_loca_y = py1[2 * i + 1];
+                nbTable[i].chil_loca_x2 = px1[2 * i];
+                nbTable[i].chil_loca_y2 = py1[2 * i];
+            }
 
-           }
-           if (nbTable[i].chil_deg_1 < nbTable[i].chil_deg_2) {
-               if (nbTable[i].chil_deg_2 - nbTable[i].chil_deg_1 < 180) {
-                   double k;
-                   k = nbTable[i].chil_deg_1;
-                   nbTable[i].chil_deg_1 = nbTable[i].chil_deg_2;
-                   nbTable[i].chil_deg_2 = k;
-                   nbTable[i].chil_loca_x = px1[2 * i + 1];
-                   nbTable[i].chil_loca_y = py1[2 * i + 1];
-                   nbTable[i].chil_loca_x2 = px1[2 * i];
-                   nbTable[i].chil_loca_y2 = py1[2 * i];
-               }
-           }
-       }
+        }
+        if (nbTable[i].chil_deg_1 < nbTable[i].chil_deg_2) {
+            if (nbTable[i].chil_deg_2 - nbTable[i].chil_deg_1 < 180) {
+                double k;
+                k = nbTable[i].chil_deg_1;
+                nbTable[i].chil_deg_1 = nbTable[i].chil_deg_2;
+                nbTable[i].chil_deg_2 = k;
+                nbTable[i].chil_loca_x = px1[2 * i + 1];
+                nbTable[i].chil_loca_y = py1[2 * i + 1];
+                nbTable[i].chil_loca_x2 = px1[2 * i];
+                nbTable[i].chil_loca_y2 = py1[2 * i];
+            }
+        }
+    }
 
-       n = nbTable.size();
-       for (i = 1; i < n; i++)
-           for (j = n - 1; j >= i; j--)
-               if (center[j] < center[j - 1]) {
-                   double k;
-                   k = center[j];
-                   center[j] = center[j - 1];
-                   center[j - 1] = k;
-                   k = count[j];
-                   count[j] = count[j - 1];
-                   count[j - 1] = k;
-               }
-       EV << "Bang nbTable:" << nbTable.size() << ":" << myNode.nodeID - 3 << ":"
-                 << myNode.locationX << "-" << myNode.locationY << ":" << nbUpdateCnt << endl;
-       for (unsigned int i = 0; i < nbTable.size(); i++) {
-           j = count[i];
-           EV << nbTable[j].nodeID << "-" << nbTable[j].locationX << "-"
-                     << nbTable[j].locationY << "-" << nbTable[j].deg << endl;
-           EV << "(" << nbTable[j].chil_loca_x << "," << nbTable[j].chil_loca_y
-                     << " - " << nbTable[j].chil_deg_1 << ")("
-                     << nbTable[j].chil_loca_x2 << "," << nbTable[j].chil_loca_y2
-                     << " - " << nbTable[j].chil_deg_2 << ")" << endl;
-       }
-       EV << "Cap node tao duoc ranh :" << endl;
-       int c = 0;
-       EV << "nbTAble.size" << nbTable.size() << endl;
-       for (unsigned int i = 0; i < nbTable.size(); i++) {
-           EV << "danh sach gia tri : " << nbTable[count[i]].nodeID - 3 << " " << i << endl;
-       }
-       int p = nbTable.size();
-       if (p > 2){
-           p = p + 1;
-       }
-       for (unsigned int i = 1; i < p; i++) {
-           int j = count[i-1], k = count[i];
-           GeoNode a, b;
-           if (i == nbTable.size()) {
-               k = count[0];
-           }
-           a.locationX = nbTable[j].chil_loca_x;
-           a.locationY = nbTable[j].chil_loca_y;
-           b.locationX = nbTable[k].locationX;
-           b.locationY = nbTable[k].locationY;
-           double d = myNode.distant(a, b);
-           couple = 0;
-           if (d > r) {
-               node1[couple] = j;
-               node2[couple] = k;
-               if (nbTable[k].deg - nbTable[j].deg > 180) {
-                   node1[couple] = k;
-                   node2[couple] = j;
-               }
-               couple = couple + 1;
-           }
-       }
-       for (unsigned int i = 0; i < couple; i++) {
-           EV << "Cap Node nbTable:" << endl;
-           EV << nbTable[node1[i]].nodeID - 3 << "-"
-                     << nbTable[node2[i]].nodeID - 3 << endl;
-       }
+    n = nbTable.size();
+    for (i = 1; i < n; i++)
+        for (j = n - 1; j >= i; j--)
+            if (center[j] < center[j - 1]) {
+                double k;
+                k = center[j];
+                center[j] = center[j - 1];
+                center[j - 1] = k;
+                k = count[j];
+                count[j] = count[j - 1];
+                count[j - 1] = k;
+            }
+    EV << "Bang nbTable:" << nbTable.size() << ":" << myNode.nodeID - 3 << ":"
+              << myNode.locationX << "-" << myNode.locationY << ":"
+              << nbUpdateCnt << endl;
+    for (unsigned int i = 0; i < nbTable.size(); i++) {
+        j = count[i];
+        EV << nbTable[j].nodeID << "-" << nbTable[j].locationX << "-"
+                  << nbTable[j].locationY << "-" << nbTable[j].deg << endl;
+        EV << "(" << nbTable[j].chil_loca_x << "," << nbTable[j].chil_loca_y
+                  << " - " << nbTable[j].chil_deg_1 << ")("
+                  << nbTable[j].chil_loca_x2 << "," << nbTable[j].chil_loca_y2
+                  << " - " << nbTable[j].chil_deg_2 << ")" << endl;
+    }
+    EV << "Cap node tao duoc ranh :" << endl;
+    int c = 0;
+    EV << "nbTAble.size" << nbTable.size() << endl;
+    for (unsigned int i = 0; i < nbTable.size(); i++) {
+        EV << "danh sach gia tri : " << nbTable[count[i]].nodeID - 3 << " " << i
+                  << endl;
+    }
+    int p = nbTable.size();
+    if (p > 2) {
+        p = p + 1;
+    }
+    EV << p << endl;
+    couple = 0;
+    for (unsigned int i = 1; i < p; i++) {
+        int j = count[i - 1], k = count[i];
+        GeoNode a, b;
+        if (i == nbTable.size()) {
+            k = count[0];
+        }
+        a.locationX = nbTable[j].chil_loca_x;
+        a.locationY = nbTable[j].chil_loca_y;
+        b.locationX = nbTable[k].locationX;
+        b.locationY = nbTable[k].locationY;
+        double d = myNode.distant(a, b);
+        if (d > r) {
+            node1[couple] = j;
+            node2[couple] = k;
+            if (nbTable[k].deg - nbTable[j].deg > 180) {
+                node1[couple] = k;
+                node2[couple] = j;
+            }
+            couple = couple + 1;
+        }
+    }
+    for (unsigned int i = 0; i < couple; i++) {
+        EV << "Cap Node nbTable:" << endl;
+        EV << nbTable[node1[i]].nodeID - 3 << "-"
+                  << nbTable[node2[i]].nodeID - 3 << endl;
+    }
 }
 
 void GeoPlus::handleLowerMsg(cMessage* msg) {
@@ -295,112 +298,110 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
         unsigned int routeSize = greedyPlusPkt->getRouteArraySize(), i;
         unsigned int routerSize = greedyPlusPkt->getRouterArraySize(), j;
 
-
         EV << "Nhan goi tin GreedyPlus" << endl;
         EV << "Node ID: " << myNode.nodeID << endl;
         EV << "ID node tiep theo: " << greedyPlusPkt->getInterNode().nodeID - 3
                   << endl;
 
-        baseLineFactor[0] = greedyPlusPkt->getBaseLineFactor(0);
-        baseLineFactor[1] = greedyPlusPkt->getBaseLineFactor(1);
-        baseLineFactor[2] = greedyPlusPkt->getBaseLineFactor(2);
-
-
+//        baseLineFactor[0] = greedyPlusPkt->getBaseLineFactor(0);
+//        baseLineFactor[1] = greedyPlusPkt->getBaseLineFactor(1);
+//        baseLineFactor[2] = greedyPlusPkt->getBaseLineFactor(2);
 
         if (greedyPlusPkt->getDestNode() != myNode
                 && greedyPlusPkt->getInterNode() != myNode) {
             delete (greedyPlusPkt);
         } else {
-            if (greedyPlusPkt->getDestNode() == myNode) {
-                EV << "Goi tin GreedyPlus da toi dich: " << endl;
-                EV << "Duong di gom " << routeSize + 1 << " node (Hop count): ";
-                for (i = 0; i < routeSize; i++) {
-                    EV << greedyPlusPkt->getRoute(i) << " -> ";
-                }
-                EV << this->getParentModule()->getName() << endl;
-                EV << "Do dai duong di la: " << greedyPlusPkt->getLength()
-                          << endl;
 
-                delete (greedyPlusPkt);
+//            if (greedyPlusPkt->getDestNode() == myNode) {
+//                EV << "Goi tin GreedyPlus da toi dich: " << endl;
+//                EV << "Duong di gom " << routeSize + 1 << " node (Hop count): ";
+//                for (i = 0; i < routeSize; i++) {
+//                    EV << greedyPlusPkt->getRoute(i) << " -> ";
+//                }
+//                EV << this->getParentModule()->getName() << endl;
+//                EV << "Do dai duong di la: " << greedyPlusPkt->getLength()
+//                          << endl;
+//
+//                delete (greedyPlusPkt);
+//                endSimulation();
+//            }
+            if (greedyPlusPkt->getBaseNode() == myNode && routerSize > 5) {
+                EV << "ok: ";
+                for (int i = 0; i < routerSize; i++) {
+                    EV << greedyPlusPkt->getRouter(i).nodeID - 3 << "-" << endl;
+                }
                 endSimulation();
-            } else {
-                if ((greedyPlusPkt->getBaseNode() == myNode)
-                        && (routerSize > 5)) {
-                    EV << "Da tim thay ho cam bien Coverage: " << endl;
-                    EV << "Duong di gom " << routerSize + 1
-                              << " node (Hop count): ";
-                    for (j = 0; j < routerSize; j++) {
-                        EV << greedyPlusPkt->getRouter(j).nodeID - 3 << " -> ";
-                    }
-                    delete (greedyPlusPkt);
-                    endSimulation();
-                } else {
-                    GeoNode* interNode = findNextNode(
-                            greedyPlusPkt->getDestNode());
-                    if (interNode == &myNode) {
-                        EV << "Bi tac o day!!!" << endl;
-                        EV << "Da di qua " << routeSize + 1
-                                  << " node (Hop count): ";
-                        for (i = 0; i < routeSize; i++) {
-                            EV << greedyPlusPkt->getRoute(i) << " -> ";
-                        }
-                        EV << this->getParentModule()->getName() << endl;
-
-                        delete (greedyPlusPkt);
-                        endSimulation();
-                    } else {
-                        cObject * const pCtrlInfo =
-                                greedyPlusPkt->removeControlInfo();
-                        if (pCtrlInfo != NULL) {
-                            delete pCtrlInfo;
-                        }
-                        greedyPlusPkt->setInterNode(*interNode);
-                        greedyPlusPkt->setDestAddr(LAddress::L3BROADCAST);
-                        greedyPlusPkt->setLength(
-                                greedyPlusPkt->getLength()
-                                        + myNode.distance(*interNode));
-
-                        greedyPlusPkt->setRouteArraySize(routeSize + 1);
-                        greedyPlusPkt->setRoute(routeSize,
-                                getParentModule()->getName());
-
-                        GeoNode a, b;
-
-                        if ((greedyPlusPkt->getRouterArraySize() == 0) && (couple > 0)) {
-                            a.locationX = myNode.locationX;
-                            a.locationY = myNode.locationY;
-                            a.nodeID = myNode.nodeID;
-                            greedyPlusPkt->setBaseNode(a);
-                            greedyPlusPkt->setRouterArraySize(1);
-                            greedyPlusPkt->setRouter(0, a);
-                        }
-                        int k = node1[0];
-                        b.locationX = nbTable[k].locationX;
-                        b.locationY = nbTable[k].locationY;
-                        b.nodeID = nbTable[k].nodeID;
-
-                        greedyPlusPkt->setInterNode(b);
-
-                        greedyPlusPkt->setRouterArraySize(
-                                greedyPlusPkt->getRouterArraySize() + 1);
-                        greedyPlusPkt->setRouter(greedyPlusPkt->getRouterArraySize() - 1, b);
-
-
-                        setDownControlInfo(greedyPlusPkt,
-                                LAddress::L2BROADCAST);
-                        sendDown(greedyPlusPkt);
-                        EV << "Chuyen tiep goi tin GreedyPlus" << endl;
-                    }
+            }
+            else {
+                for (int i = 0; i < routerSize; i++) {
+                    EV << greedyPlusPkt->getRouter(i).nodeID - 3 << "-";
                 }
+                EV << endl;
+                GeoNode* interNode = findNextNode(greedyPlusPkt->getDestNode());
+//                if (interNode == &myNode) {
+//                    EV << "Bi tac o day!!!" << endl;
+//                    EV << "Da di qua " << routeSize + 1
+//                              << " node (Hop count): ";
+//                    for (i = 0; i < routeSize; i++) {
+//                        EV << greedyPlusPkt->getRoute(i) << " -> ";
+//                    }
+//                    EV << this->getParentModule()->getName() << endl;
+//
+//                    delete (greedyPlusPkt);
+//
+//                } else {
+                EV << "I'm here" << endl;
+                cObject * const pCtrlInfo = greedyPlusPkt->removeControlInfo();
+                if (pCtrlInfo != NULL) {
+                    delete pCtrlInfo;
+                }
+                greedyPlusPkt->setInterNode(*interNode);
+                greedyPlusPkt->setDestAddr(LAddress::L3BROADCAST);
+                greedyPlusPkt->setLength(
+                        greedyPlusPkt->getLength()
+                                + myNode.distance(*interNode));
+
+                greedyPlusPkt->setRouteArraySize(routeSize + 1);
+                greedyPlusPkt->setRoute(routeSize,
+                        getParentModule()->getName());
+                EV << "couple" << couple << endl;
+                //for (i = 0; i < couple; i++) {
+
+                    GreedyPlusPkt* clone = greedyPlusPkt;
+                    GeoNode a, b;
+
+                    if ((clone->getRouterArraySize() == 0) && (couple > 0)) {
+                        a.locationX = myNode.locationX;
+                        a.locationY = myNode.locationY;
+                        a.nodeID = myNode.nodeID;
+                        clone->setBaseNode(a);
+                        clone->setRouterArraySize(1);
+                        clone->setRouter(0, a);
+                    }
+
+                    int k = node1[0];
+                    b.locationX = nbTable[k].locationX;
+                    b.locationY = nbTable[k].locationY;
+                    b.nodeID = nbTable[k].nodeID;
+                    //EV << "node tiep theo : " << nbTable[node1[i]].nodeID << endl;
+                    clone->setInterNode(b);
+
+                    clone->setRouterArraySize(clone->getRouterArraySize() + 1);
+                    clone->setRouter(clone->getRouterArraySize() - 1, b);
+
+                    setDownControlInfo(clone, LAddress::L2BROADCAST);
+                    sendDown(clone);
+                    EV << "Chuyen tiep goi tin GreedyPlus" << endl;
+              //  }
             }
         }
     }
 }
 
 void GeoPlus::finish() {
-    recordScalar("Remaining Power",
-            dynamic_cast<SimpleBattery*>(getParentModule()->getSubmodule(
-                    "battery"))->estimateResidualAbs());
+//    recordScalar("Remaining Power",
+//            dynamic_cast<SimpleBattery*>(getParentModule()->getSubmodule(
+//                    "battery"))->estimateResidualAbs());
 //    for (unsigned int i = 0; i < nbTable.size(); i++) {
 //        recordScalar("ID", nbTable[i].nodeID);
 //        recordScalar("locationX", nbTable[i].locationX);

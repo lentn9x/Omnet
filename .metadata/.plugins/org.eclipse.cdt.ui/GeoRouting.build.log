@@ -1,9 +1,5 @@
-22:19:08 **** Incremental Build of configuration gcc-debug for project GeoRouting ****
+01:32:03 **** Incremental Build of configuration gcc-debug for project GeoRouting ****
 make MODE=debug CONFIGNAME=gcc-debug all 
-GeoBasic.cc
-GreedyPkt_m.cc
-NeighborUpdatePkt_m.cc
-Creating executable: out/gcc-debug//GeoRouting.exe
 
-22:19:14 Build Finished (took 5s.803ms)
+01:32:03 Build Finished (took 230ms)
 

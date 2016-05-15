@@ -1,14 +1,14 @@
 version 2
-run GreedyPlus-0-20160510-18:52:52-6904
+run GreedyPlus-0-20160515-22:36:01-6504
 attr configname GreedyPlus
-attr datetime 20160510-18:52:52
+attr datetime 20160515-22:36:01
 attr experiment GreedyPlus
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network GeoRoutingNetwork1
-attr processid 6904
+attr processid 6504
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -33,3 +33,759 @@ scalar GeoRoutingNetwork1.node15.netwl 	"Initial Power" 	18
 scalar GeoRoutingNetwork1.node16.netwl 	"Initial Power" 	18
 scalar GeoRoutingNetwork1.node17.netwl 	"Initial Power" 	18
 scalar GeoRoutingNetwork1.node18.netwl 	"Initial Power" 	18
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbRxFrames 	3
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node1.nic.mac 	meanBackoff 	0.0011733333333333
+scalar GeoRoutingNetwork1.node1.nic.mac 	nbBackoffs 	9
+scalar GeoRoutingNetwork1.node1.nic.mac 	backoffDurations 	0.01056
+scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithInterference 	3
+scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithoutInterference 	7
+scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node1.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node1.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node1.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node1.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node1.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node1.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node1.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node1.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node1.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node1.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node1.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node1.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbRxFrames 	3
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node2.nic.mac 	meanBackoff 	0.0014577777777778
+scalar GeoRoutingNetwork1.node2.nic.mac 	nbBackoffs 	9
+scalar GeoRoutingNetwork1.node2.nic.mac 	backoffDurations 	0.01312
+scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithoutInterference 	14
+scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node2.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node2.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node2.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node2.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node2.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node2.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node2.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node2.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node2.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node2.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node2.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node2.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbRxFrames 	10
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node3.nic.mac 	meanBackoff 	0.00096
+scalar GeoRoutingNetwork1.node3.nic.mac 	nbBackoffs 	7
+scalar GeoRoutingNetwork1.node3.nic.mac 	backoffDurations 	0.00672
+scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithoutInterference 	13
+scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node3.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node3.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node3.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node3.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node3.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node3.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node3.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node3.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node3.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node3.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node3.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node3.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbRxFrames 	5
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node4.nic.mac 	meanBackoff 	0.0011377777777778
+scalar GeoRoutingNetwork1.node4.nic.mac 	nbBackoffs 	9
+scalar GeoRoutingNetwork1.node4.nic.mac 	backoffDurations 	0.01024
+scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithInterference 	1
+scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithoutInterference 	11
+scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node4.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node4.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node4.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node4.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node4.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node4.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node4.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node4.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node4.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node4.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node4.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node4.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbRxFrames 	0
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node5.nic.mac 	meanBackoff 	0.0020266666666667
+scalar GeoRoutingNetwork1.node5.nic.mac 	nbBackoffs 	9
+scalar GeoRoutingNetwork1.node5.nic.mac 	backoffDurations 	0.01824
+scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithoutInterference 	11
+scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node5.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node5.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node5.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node5.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node5.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node5.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node5.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node5.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node5.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node5.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node5.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node5.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbRxFrames 	2
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node6.nic.mac 	meanBackoff 	0.001696
+scalar GeoRoutingNetwork1.node6.nic.mac 	nbBackoffs 	10
+scalar GeoRoutingNetwork1.node6.nic.mac 	backoffDurations 	0.01696
+scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithoutInterference 	14
+scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node6.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node6.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node6.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node6.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node6.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node6.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node6.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node6.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node6.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node6.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node6.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node6.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbRxFrames 	8
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node7.nic.mac 	meanBackoff 	0.00128
+scalar GeoRoutingNetwork1.node7.nic.mac 	nbBackoffs 	7
+scalar GeoRoutingNetwork1.node7.nic.mac 	backoffDurations 	0.00896
+scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithInterference 	1
+scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithoutInterference 	11
+scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node7.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node7.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node7.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node7.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node7.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node7.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node7.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node7.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node7.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node7.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node7.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node7.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbTxFrames 	8
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbRxFrames 	8
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node8.nic.mac 	meanBackoff 	0.00108
+scalar GeoRoutingNetwork1.node8.nic.mac 	nbBackoffs 	8
+scalar GeoRoutingNetwork1.node8.nic.mac 	backoffDurations 	0.00864
+scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithoutInterference 	12
+scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node8.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node8.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node8.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node8.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node8.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node8.appl 	nbPacketsSent 	1
+scalar GeoRoutingNetwork1.node8.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node8.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node8.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node8.batteryStats 	total 	1.8406054069962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node8.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node8.batteryStats 	"Mean power consumption" 	1.879432761371
+attr unit  mW
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbTxFrames 	7
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbRxFrames 	2
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node9.nic.mac 	meanBackoff 	0.0017066666666667
+scalar GeoRoutingNetwork1.node9.nic.mac 	nbBackoffs 	9
+scalar GeoRoutingNetwork1.node9.nic.mac 	backoffDurations 	0.01536
+scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithInterference 	2
+scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithoutInterference 	8
+scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node9.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node9.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node9.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node9.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node9.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node9.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node9.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node9.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node9.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node9.batteryStats 	total 	1.8406748469962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node9.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node9.batteryStats 	"Mean power consumption" 	1.8795036661996
+attr unit  mW
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbRxFrames 	0
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node10.nic.mac 	meanBackoff 	0.00156
+scalar GeoRoutingNetwork1.node10.nic.mac 	nbBackoffs 	8
+scalar GeoRoutingNetwork1.node10.nic.mac 	backoffDurations 	0.01248
+scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithoutInterference 	11
+scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node10.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node10.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node10.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node10.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node10.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node10.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node10.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node10.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node10.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node10.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node10.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node10.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbRxFrames 	1
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node11.nic.mac 	meanBackoff 	0.0012266666666667
+scalar GeoRoutingNetwork1.node11.nic.mac 	nbBackoffs 	6
+scalar GeoRoutingNetwork1.node11.nic.mac 	backoffDurations 	0.00736
+scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithInterference 	3
+scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithoutInterference 	5
+scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node11.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node11.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node11.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node11.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node11.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node11.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node11.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node11.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node11.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node11.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node11.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node11.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbRxFrames 	6
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node12.nic.mac 	meanBackoff 	0.0012342857142857
+scalar GeoRoutingNetwork1.node12.nic.mac 	nbBackoffs 	7
+scalar GeoRoutingNetwork1.node12.nic.mac 	backoffDurations 	0.00864
+scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithoutInterference 	11
+scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node12.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node12.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node12.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node12.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node12.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node12.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node12.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node12.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node12.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node12.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node12.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node12.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbRxFrames 	2
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node13.nic.mac 	meanBackoff 	0.00091428571428571
+scalar GeoRoutingNetwork1.node13.nic.mac 	nbBackoffs 	7
+scalar GeoRoutingNetwork1.node13.nic.mac 	backoffDurations 	0.0064
+scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithoutInterference 	12
+scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node13.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node13.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node13.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node13.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node13.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node13.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node13.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node13.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node13.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node13.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node13.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node13.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbRxFrames 	4
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node14.nic.mac 	meanBackoff 	0.00096
+scalar GeoRoutingNetwork1.node14.nic.mac 	nbBackoffs 	6
+scalar GeoRoutingNetwork1.node14.nic.mac 	backoffDurations 	0.00576
+scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithInterference 	1
+scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithoutInterference 	8
+scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node14.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node14.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node14.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node14.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node14.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node14.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node14.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node14.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node14.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node14.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node14.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node14.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbRxFrames 	0
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node15.nic.mac 	meanBackoff 	0.0015466666666667
+scalar GeoRoutingNetwork1.node15.nic.mac 	nbBackoffs 	6
+scalar GeoRoutingNetwork1.node15.nic.mac 	backoffDurations 	0.00928
+scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithoutInterference 	0
+scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node15.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node15.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node15.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node15.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node15.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node15.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node15.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node15.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node15.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node15.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node15.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node15.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbRxFrames 	10
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node16.nic.mac 	meanBackoff 	0.0010666666666667
+scalar GeoRoutingNetwork1.node16.nic.mac 	nbBackoffs 	6
+scalar GeoRoutingNetwork1.node16.nic.mac 	backoffDurations 	0.0064
+scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithInterference 	1
+scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithoutInterference 	9
+scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node16.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node16.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node16.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node16.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node16.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node16.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node16.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node16.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node16.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node16.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node16.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node16.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbRxFrames 	0
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node17.nic.mac 	meanBackoff 	0.001696
+scalar GeoRoutingNetwork1.node17.nic.mac 	nbBackoffs 	10
+scalar GeoRoutingNetwork1.node17.nic.mac 	backoffDurations 	0.01696
+scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithInterference 	1
+scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithoutInterference 	9
+scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node17.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node17.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node17.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node17.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node17.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node17.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node17.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node17.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node17.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node17.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node17.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node17.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbTxFrames 	6
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbRxFrames 	3
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbDroppedFrames 	0
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbMissedAcks 	0
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbRecvdAcks 	0
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbTxAcks 	0
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbDuplicates 	0
+scalar GeoRoutingNetwork1.node18.nic.mac 	meanBackoff 	0.0017371428571429
+scalar GeoRoutingNetwork1.node18.nic.mac 	nbBackoffs 	7
+scalar GeoRoutingNetwork1.node18.nic.mac 	backoffDurations 	0.01216
+scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithInterference 	0
+scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithoutInterference 	12
+scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithInterferencePartial 	0
+scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar GeoRoutingNetwork1.node18.tranl 	nbAggrPktReceived 	0
+scalar GeoRoutingNetwork1.node18.tranl 	"nbAggrPktSentDown " 	0
+scalar GeoRoutingNetwork1.node18.appl 	"activity duration" 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node18.appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node18.appl 	lastPacketReception 	-2
+attr unit  s
+scalar GeoRoutingNetwork1.node18.appl 	nbPacketsSent 	0
+scalar GeoRoutingNetwork1.node18.appl 	nbPacketsReceived 	0
+statistic GeoRoutingNetwork1.node18.appl 	latency
+field count 0
+field mean nan
+field stddev nan
+field sum 0
+field sqrsum 0
+field min nan
+field max nan
+scalar GeoRoutingNetwork1.node18.batteryStats 	nominal 	18
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node18.batteryStats 	total 	1.8407442869962
+attr unit  mW-s
+scalar GeoRoutingNetwork1.node18.batteryStats 	lifetime 	-1
+attr unit  s
+scalar GeoRoutingNetwork1.node18.batteryStats 	"Mean power consumption" 	1.8795745710282
+attr unit  mW

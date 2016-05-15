@@ -1,30 +1,5 @@
-21:59:46 **** Build of configuration gcc-debug for project tictoc ****
+01:32:05 **** Incremental Build of configuration gcc-debug for project tictoc ****
 make MODE=debug CONFIGNAME=gcc-debug all 
-txc1.cc
-txc10.cc
-txc11.cc
-txc12.cc
-MSGC: tictoc13.msg
-txc13.cc
-MSGC: tictoc14.msg
-txc14.cc
-MSGC: tictoc15.msg
-txc15.cc
-MSGC: tictoc16.msg
-txc16.cc
-txc2.cc
-txc3.cc
-txc4.cc
-txc5.cc
-txc6.cc
-txc7.cc
-txc8.cc
-txc9.cc
-tictoc13_m.cc
-tictoc14_m.cc
-tictoc15_m.cc
-tictoc16_m.cc
-Creating executable: out/gcc-debug//tictoc.exe
 
-22:00:13 Build Finished (took 27s.150ms)
+01:32:05 Build Finished (took 231ms)
 
