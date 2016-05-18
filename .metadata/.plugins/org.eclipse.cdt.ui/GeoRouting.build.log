@@ -1,5 +1,0 @@
-01:32:03 **** Incremental Build of configuration gcc-debug for project GeoRouting ****
-make MODE=debug CONFIGNAME=gcc-debug all 
-
-01:32:03 Build Finished (took 230ms)
-

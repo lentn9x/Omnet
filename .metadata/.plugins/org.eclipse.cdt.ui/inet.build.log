@@ -1,8 +1,0 @@
-01:32:03 **** Incremental Build of configuration gcc-debug for project inet ****
-make MODE=debug CONFIGNAME=gcc-debug -j4 all 
-cd src && /usr/bin/make all
-make[1]: Entering directory '/d/Omnet/inet/src'
-make[1]: Leaving directory '/d/Omnet/inet/src'
-
-01:32:04 Build Finished (took 778ms)
-

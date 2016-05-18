@@ -37,19 +37,19 @@ network GeoRoutingNetwork1 extends BaseNetwork
             @display("p=391,189;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node10: Host802154 {
-            @display("p=189,322;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=201,345;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node11: Host802154 {
-            @display("p=337,366;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=456,55;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node12: Host802154 {
             @display("p=116,351;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node13: Host802154 {
-            @display("p=337,448;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=267,394;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node14: Host802154 {
-            @display("p=267,322;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=368,262;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node15: Host802154 {
             @display("p=669,130;i=misc/node2,,0;b=3,5;is=vs;i2=-");
@@ -61,7 +61,7 @@ network GeoRoutingNetwork1 extends BaseNetwork
             @display("p=182,496;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node18: Host802154 {
-            @display("p=267,496;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=261,474;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
     connections allowunconnected:
 		//	all connections and gates are to be generated dynamically

@@ -1,5 +1,0 @@
-00:28:00 **** Incremental Build of configuration gcc-debug for project Greedy ****
-make MODE=debug CONFIGNAME=gcc-debug all 
-
-00:28:00 Build Finished (took 229ms)
-
