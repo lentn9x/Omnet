@@ -185,7 +185,7 @@ void GeoPlus::findBaseNode() {
                 count[j] = count[j - 1];
                 count[j - 1] = k;
             }
-    EV << "Bang nbTable:" << nbTable.size() << ":" << myNode.nodeID - 3 << ":"
+    EV << "Bang nbTable:" << nbTable.size() << ":" << myNode.nodeID << ":"
               << myNode.locationX << "-" << myNode.locationY << ":"
               << nbUpdateCnt << endl;
     for (unsigned int i = 0; i < nbTable.size(); i++) {
@@ -254,7 +254,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
         EV << endl;
         delete (netwMsg);
 
-        if (nbUpdateCnt >= 5) {
+        if (nbUpdateCnt >= 5 && couple) {
             GreedyPlusPkt* greedyPlusPkt = new GreedyPlusPkt();
             greedyPlusPkt->setName("GreedyPlusPkt");
 
@@ -269,19 +269,40 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
             greedyPlusPkt->setRouteArraySize(1);
             greedyPlusPkt->setRoute(0, getParentModule()->getName());
 
-            GeoNode interNode = *findNextNode(greedyPlusPkt->getDestNode());
-            greedyPlusPkt->setInterNode(interNode);
-            greedyPlusPkt->setLength(myNode.distance(interNode));
+            for (int i = 0; i < couple; i++) {
 
-            greedyPlusPkt->setBitLength(headerLength);
-            greedyPlusPkt->setDestAddr(LAddress::L3BROADCAST);
+                GreedyPlusPkt* clone = (GreedyPlusPkt*) greedyPlusPkt->dup();
+                GeoNode a, b;
 
-            setDownControlInfo(greedyPlusPkt, LAddress::L2BROADCAST);
-            sendDown(greedyPlusPkt);
-            EV << "Node ID: " << myNode.nodeID << endl;
-            EV << "ID node tiep theo: " << greedyPlusPkt->getInterNode().nodeID
-                      << endl;
-            EV << "Bat dau gui goi Greedy" << endl;
+                a.locationX = myNode.locationX;
+                a.locationY = myNode.locationY;
+                a.nodeID = myNode.nodeID;
+                clone->setBaseNode(a);
+                clone->setRouterArraySize(1);
+                clone->setRouter(0, a);
+
+                int k = node1[i];
+                b.locationX = nbTable[k].locationX;
+                b.locationY = nbTable[k].locationY;
+                b.nodeID = nbTable[k].nodeID;
+
+                clone->setInterNode(b);
+
+                clone->setRouter(clone->getRouterArraySize() - 1, b);
+
+//                greedyPlusPkt->setLength(myNode.distance(interNode));
+
+                clone->setBitLength(headerLength);
+                clone->setDestAddr(LAddress::L3BROADCAST);
+
+                setDownControlInfo(clone, LAddress::L2BROADCAST);
+                sendDown(clone);
+                EV << "Node ID: " << myNode.nodeID << endl;
+                EV << "ID node tiep theo: " << clone->getInterNode().nodeID
+                          << endl;
+                EV << "Bat dau gui goi Greedy" << endl;
+            }
+
         }
     }
 
@@ -292,81 +313,105 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
 
         EV << "Nhan goi tin GreedyPlus" << endl;
         EV << "Node ID: " << myNode.nodeID << endl;
-        EV << "ID node tiep theo: " << greedyPlusPkt->getInterNode().nodeID - 3
+        EV << "ID Node tiep theo: " << greedyPlusPkt->getInterNode().nodeID
                   << endl;
 
-
+        for (int i = 0; i < routerSize - 1; i++) {
+            EV << "node" << greedyPlusPkt->getRouter(i).nodeID << ", ";
+        }
+        EV << "node" << greedyPlusPkt->getRouter(0).nodeID << endl;
 
 // <--------------------------------------------------------------------------->
 
-
-
-
-        if (greedyPlusPkt->getDestNode() != myNode
-                && greedyPlusPkt->getInterNode() != myNode) {
+        if (greedyPlusPkt->getInterNode() != myNode) {
+            EV << "here" << endl;
             delete (greedyPlusPkt);
-        } else
-        {
-            EV << "vao den day roi" << endl;
-            if ((greedyPlusPkt->getBaseNode() == myNode) && (routerSize > 5)) {
-                EV << "ok: " << endl;
-                for (int i = 0; i < routerSize - 1; i++) {
-                    EV << "node" << greedyPlusPkt->getRouter(i).nodeID - 3
-                              << ", ";
-                }
-                EV << "node" << greedyPlusPkt->getRouter(i).nodeID - 3 << endl;
-//                endSimulation();
-            } else {
-                EV << "process: " << endl;
-                for (int i = 0; i < routerSize; i++) {
-                    EV << greedyPlusPkt->getRouter(i).nodeID - 3 << "-";
-                }
-                EV << endl;
-                GeoNode* interNode = findNextNode(greedyPlusPkt->getDestNode());
-
-                EV << "I'm here" << endl;
-                cObject * const pCtrlInfo = greedyPlusPkt->removeControlInfo();
-                if (pCtrlInfo != NULL) {
-                    delete pCtrlInfo;
-                }
-                greedyPlusPkt->setInterNode(*interNode);
-                greedyPlusPkt->setDestAddr(LAddress::L3BROADCAST);
-                greedyPlusPkt->setLength(
-                        greedyPlusPkt->getLength()
-                                + myNode.distance(*interNode));
-
-                greedyPlusPkt->setRouteArraySize(routeSize + 1);
-                greedyPlusPkt->setRoute(routeSize,
-                        getParentModule()->getName());
-                EV << "couple" << couple << endl;
-                for (i = 0; i < couple; i++) {
-
-                    GreedyPlusPkt* clone =
-                            (GreedyPlusPkt*) greedyPlusPkt->dup();
-                    GeoNode a, b;
-
-                    if ((clone->getRouterArraySize() == 0) && (couple > 0)) {
-                        a.locationX = myNode.locationX;
-                        a.locationY = myNode.locationY;
-                        a.nodeID = myNode.nodeID;
-                        clone->setBaseNode(a);
-                        clone->setRouterArraySize(1);
-                        clone->setRouter(0, a);
+        } else {
+            bool check[100], checkout;
+            checkout = true;
+            for (int i = 0; i < 100; i++) {
+                check[i] = true;
+            }
+            {
+                EV << "vao den day roi, routerSize = " << routerSize << endl;
+                if ((greedyPlusPkt->getBaseNode() == myNode)
+                        && (routerSize > 5)) {
+                    EV << "ok: " << endl;
+//                    for (int i = 0; i < routerSize - 1; i++) {
+//                        if (check[greedyPlusPkt->getRouter(i).nodeID - 3]
+//                                == true) {
+//                            check[greedyPlusPkt->getRouter(i).nodeID - 3] =
+//                                    false;
+//                        } else {
+//                            break;
+//                            checkout = false;
+//                        }
+//                    }
+//                    if (checkout == false) {
+//                        delete (greedyPlusPkt);
+//                    }
+                    for (i = 0; i < routerSize - 1; i++) {
+                        EV << "node" << greedyPlusPkt->getRouter(i).nodeID
+                                  << ", ";
                     }
+                    EV << "node" << greedyPlusPkt->getRouter(i).nodeID << endl;
+//                endSimulation();
+                } else {
+                    EV << "process: " << endl;
+                    for (int i = 0; i < routerSize; i++) {
+                        EV << greedyPlusPkt->getRouter(i).nodeID - 3 << "-";
+                    }
+                    EV << endl;
+                    GeoNode* interNode = findNextNode(
+                            greedyPlusPkt->getDestNode());
 
-                    int k = node1[i];
-                    b.locationX = nbTable[k].locationX;
-                    b.locationY = nbTable[k].locationY;
-                    b.nodeID = nbTable[k].nodeID;
+                    EV << "I'm here" << endl;
+                    cObject * const pCtrlInfo =
+                            greedyPlusPkt->removeControlInfo();
+                    if (pCtrlInfo != NULL) {
+                        delete pCtrlInfo;
+                    }
+                    greedyPlusPkt->setInterNode(*interNode);
+                    greedyPlusPkt->setDestAddr(LAddress::L3BROADCAST);
+                    greedyPlusPkt->setLength(
+                            greedyPlusPkt->getLength()
+                                    + myNode.distance(*interNode));
 
-                          clone->setInterNode(b);
+                    greedyPlusPkt->setRouteArraySize(routeSize + 1);
+                    greedyPlusPkt->setRoute(routeSize,
+                            getParentModule()->getName());
+                    EV << "couple" << couple << endl;
+                    for (i = 0; i < couple; i++) {
 
-                    clone->setRouterArraySize(clone->getRouterArraySize() + 1);
-                    clone->setRouter(clone->getRouterArraySize() - 1, b);
+                        GreedyPlusPkt* clone =
+                                (GreedyPlusPkt*) greedyPlusPkt->dup();
+                        GeoNode a, b;
 
-                    setDownControlInfo(clone, LAddress::L2BROADCAST);
-                    sendDown(clone);
-                    EV << "Chuyen tiep goi tin GreedyPlus" << endl;
+                        if ((clone->getRouterArraySize() == 0)
+                                && (couple > 0)) {
+                            a.locationX = myNode.locationX;
+                            a.locationY = myNode.locationY;
+                            a.nodeID = myNode.nodeID;
+                            clone->setBaseNode(a);
+                            clone->setRouterArraySize(1);
+                            clone->setRouter(0, a);
+                        }
+
+                        int k = node1[i];
+                        b.locationX = nbTable[k].locationX;
+                        b.locationY = nbTable[k].locationY;
+                        b.nodeID = nbTable[k].nodeID;
+
+                        clone->setInterNode(b);
+
+                        clone->setRouterArraySize(
+                                clone->getRouterArraySize() + 1);
+                        clone->setRouter(clone->getRouterArraySize() - 1, b);
+
+                        setDownControlInfo(clone, LAddress::L2BROADCAST);
+                        sendDown(clone);
+                        EV << "Chuyen tiep goi tin GreedyPlus" << endl;
+                    }
                 }
             }
         }
@@ -382,8 +427,6 @@ void GeoPlus::finish() {
 //        recordScalar("locationX", nbTable[i].locationX);
 //        recordScalar("locationY", nbTable[i].locationY);
 //    }
-
-
 
     BaseNetwLayer::finish();
     EV << "su kien cuoi cung" << endl;
