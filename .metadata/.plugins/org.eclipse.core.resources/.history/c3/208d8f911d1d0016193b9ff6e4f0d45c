@@ -1,0 +1,209 @@
+package georouting;
+
+import org.mixim.base.modules.BaseNetwork;
+
+network GeoRoutingNetwork3 extends BaseNetwork
+{
+    parameters:
+        @display("bgb=1000,1000;bgl=2");
+
+    submodules:
+
+        node1: Host802154 {
+            @display("p=45,69;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node2: Host802154 {
+            @display("p=842,184;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node3: Host802154 {
+            @display("p=141,101;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node4: Host802154 {
+            @display("p=396,101;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node5: Host802154 {
+            @display("p=697,184;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node6: Host802154 {
+            @display("p=658,279;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node7: Host802154 {
+            @display("p=529,171;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node8: Host802154 {
+            @display("p=801,346;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node9: Host802154 {
+            @display("p=51,138;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node10: Host802154 {
+            @display("p=32,30;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node11: Host802154 {
+            @display("p=210,30;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node12: Host802154 {
+            @display("p=138,44;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node13: Host802154 {
+            @display("p=275,130;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node14: Host802154 {
+            @display("p=290,52;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node15: Host802154 {
+            @display("p=232,92;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node16: Host802154 {
+            @display("p=234,199;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node17: Host802154 {
+            @display("p=155,171;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node18: Host802154 {
+            @display("p=833,116;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node19: Host802154 {
+            @display("p=304,235;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node20: Host802154 {
+            @display("p=183,321;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node21: Host802154 {
+            @display("p=138,274;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node22: Host802154 {
+            @display("p=37,282;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node23: Host802154 {
+            @display("p=15,199;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node24: Host802154 {
+            @display("p=123,416;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node25: Host802154 {
+            @display("p=51,359;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node26: Host802154 {
+            @display("p=544,470;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node27: Host802154 {
+            @display("p=425,214;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node28: Host802154 {
+            @display("p=331,199;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node29: Host802154 {
+            @display("p=411,156;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node30: Host802154 {
+            @display("p=651,130;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node31: Host802154 {
+            @display("p=114,214;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node32: Host802154 {
+            @display("p=554,250;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node33: Host802154 {
+            @display("p=141,470;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node34: Host802154 {
+            @display("p=365,20;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node35: Host802154 {
+            @display("p=484,22;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node36: Host802154 {
+            @display("p=636,59;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node37: Host802154 {
+            @display("p=375,289;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node38: Host802154 {
+            @display("p=425,346;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node39: Host802154 {
+            @display("p=425,416;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node40: Host802154 {
+            @display("p=76,455;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node41: Host802154 {
+            @display("p=232,385;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node42: Host802154 {
+            @display("p=290,431;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node43: Host802154 {
+            @display("p=842,481;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node44: Host802154 {
+            @display("p=606,500;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node45: Host802154 {
+            @display("p=452,528;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node46: Host802154 {
+            @display("p=26,455;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node47: Host802154 {
+            @display("p=59,525;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node48: Host802154 {
+            @display("p=183,528;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node49: Host802154 {
+            @display("p=316,500;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node50: Host802154 {
+            @display("p=315,554;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node51: Host802154 {
+            @display("p=375,455;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node52: Host802154 {
+            @display("p=703,481;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node53: Host802154 {
+            @display("p=827,444;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node54: Host802154 {
+            @display("p=565,382;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node55: Host802154 {
+            @display("p=544,326;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node56: Host802154 {
+            @display("p=777,77;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node57: Host802154 {
+            @display("p=748,18;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node58: Host802154 {
+            @display("p=688,20;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node59: Host802154 {
+            @display("p=565,128;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node60: Host802154 {
+            @display("p=478,112;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node61: Host802154 {
+            @display("p=703,326;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node62: Host802154 {
+            @display("p=662,359;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node63: Host802154 {
+            @display("p=770,220;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node64: Host802154 {
+            @display("p=658,416;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node65: Host802154 {
+            @display("p=732,397;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+    connections allowunconnected:
+		//	all connections and gates are to be generated dynamically
+}
