@@ -61,6 +61,10 @@ GreedyPlusPkt::GreedyPlusPkt(const char *name, int kind) : ::NetwPkt(name,kind)
     this->route_var = 0;
     router_arraysize = 0;
     this->router_var = 0;
+    for (unsigned int i=0; i<100; i++)
+        this->tracker_var[i] = 0;
+    for (unsigned int i=0; i<100; i++)
+        this->repeat_var[i] = 0;
     this->length_var = 0;
     for (unsigned int i=0; i<3; i++)
         this->baseLineFactor_var[i] = 0;
@@ -104,6 +108,10 @@ void GreedyPlusPkt::copy(const GreedyPlusPkt& other)
     router_arraysize = other.router_arraysize;
     for (unsigned int i=0; i<router_arraysize; i++)
         this->router_var[i] = other.router_var[i];
+    for (unsigned int i=0; i<100; i++)
+        this->tracker_var[i] = other.tracker_var[i];
+    for (unsigned int i=0; i<100; i++)
+        this->repeat_var[i] = other.repeat_var[i];
     this->length_var = other.length_var;
     for (unsigned int i=0; i<3; i++)
         this->baseLineFactor_var[i] = other.baseLineFactor_var[i];
@@ -119,6 +127,8 @@ void GreedyPlusPkt::parsimPack(cCommBuffer *b)
     doPacking(b,this->route_var,route_arraysize);
     b->pack(router_arraysize);
     doPacking(b,this->router_var,router_arraysize);
+    doPacking(b,this->tracker_var,100);
+    doPacking(b,this->repeat_var,100);
     doPacking(b,this->length_var);
     doPacking(b,this->baseLineFactor_var,3);
 }
@@ -145,6 +155,8 @@ void GreedyPlusPkt::parsimUnpack(cCommBuffer *b)
         this->router_var = new GeoNode[router_arraysize];
         doUnpacking(b,this->router_var,router_arraysize);
     }
+    doUnpacking(b,this->tracker_var,100);
+    doUnpacking(b,this->repeat_var,100);
     doUnpacking(b,this->length_var);
     doUnpacking(b,this->baseLineFactor_var,3);
 }
@@ -237,6 +249,40 @@ void GreedyPlusPkt::setRouter(unsigned int k, const GeoNode& router)
     this->router_var[k] = router;
 }
 
+unsigned int GreedyPlusPkt::getTrackerArraySize() const
+{
+    return 100;
+}
+
+bool GreedyPlusPkt::getTracker(unsigned int k) const
+{
+    if (k>=100) throw cRuntimeError("Array of size 100 indexed by %lu", (unsigned long)k);
+    return tracker_var[k];
+}
+
+void GreedyPlusPkt::setTracker(unsigned int k, bool tracker)
+{
+    if (k>=100) throw cRuntimeError("Array of size 100 indexed by %lu", (unsigned long)k);
+    this->tracker_var[k] = tracker;
+}
+
+unsigned int GreedyPlusPkt::getRepeatArraySize() const
+{
+    return 100;
+}
+
+bool GreedyPlusPkt::getRepeat(unsigned int k) const
+{
+    if (k>=100) throw cRuntimeError("Array of size 100 indexed by %lu", (unsigned long)k);
+    return repeat_var[k];
+}
+
+void GreedyPlusPkt::setRepeat(unsigned int k, bool repeat)
+{
+    if (k>=100) throw cRuntimeError("Array of size 100 indexed by %lu", (unsigned long)k);
+    this->repeat_var[k] = repeat;
+}
+
 double GreedyPlusPkt::getLength() const
 {
     return length_var;
@@ -311,7 +357,7 @@ const char *GreedyPlusPktDescriptor::getProperty(const char *propertyname) const
 int GreedyPlusPktDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 7+basedesc->getFieldCount(object) : 7;
+    return basedesc ? 9+basedesc->getFieldCount(object) : 9;
 }
 
 unsigned int GreedyPlusPktDescriptor::getFieldTypeFlags(void *object, int field) const
@@ -328,10 +374,12 @@ unsigned int GreedyPlusPktDescriptor::getFieldTypeFlags(void *object, int field)
         FD_ISCOMPOUND,
         FD_ISARRAY | FD_ISEDITABLE,
         FD_ISARRAY | FD_ISCOMPOUND,
+        FD_ISARRAY | FD_ISEDITABLE,
+        FD_ISARRAY | FD_ISEDITABLE,
         FD_ISEDITABLE,
         FD_ISARRAY | FD_ISEDITABLE,
     };
-    return (field>=0 && field<7) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<9) ? fieldTypeFlags[field] : 0;
 }
 
 const char *GreedyPlusPktDescriptor::getFieldName(void *object, int field) const
@@ -348,10 +396,12 @@ const char *GreedyPlusPktDescriptor::getFieldName(void *object, int field) const
         "baseNode",
         "route",
         "router",
+        "tracker",
+        "repeat",
         "length",
         "baseLineFactor",
     };
-    return (field>=0 && field<7) ? fieldNames[field] : NULL;
+    return (field>=0 && field<9) ? fieldNames[field] : NULL;
 }
 
 int GreedyPlusPktDescriptor::findField(void *object, const char *fieldName) const
@@ -363,8 +413,10 @@ int GreedyPlusPktDescriptor::findField(void *object, const char *fieldName) cons
     if (fieldName[0]=='b' && strcmp(fieldName, "baseNode")==0) return base+2;
     if (fieldName[0]=='r' && strcmp(fieldName, "route")==0) return base+3;
     if (fieldName[0]=='r' && strcmp(fieldName, "router")==0) return base+4;
-    if (fieldName[0]=='l' && strcmp(fieldName, "length")==0) return base+5;
-    if (fieldName[0]=='b' && strcmp(fieldName, "baseLineFactor")==0) return base+6;
+    if (fieldName[0]=='t' && strcmp(fieldName, "tracker")==0) return base+5;
+    if (fieldName[0]=='r' && strcmp(fieldName, "repeat")==0) return base+6;
+    if (fieldName[0]=='l' && strcmp(fieldName, "length")==0) return base+7;
+    if (fieldName[0]=='b' && strcmp(fieldName, "baseLineFactor")==0) return base+8;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
@@ -382,10 +434,12 @@ const char *GreedyPlusPktDescriptor::getFieldTypeString(void *object, int field)
         "GeoNode",
         "string",
         "GeoNode",
+        "bool",
+        "bool",
         "double",
         "double",
     };
-    return (field>=0 && field<7) ? fieldTypeStrings[field] : NULL;
+    return (field>=0 && field<9) ? fieldTypeStrings[field] : NULL;
 }
 
 const char *GreedyPlusPktDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
@@ -413,7 +467,9 @@ int GreedyPlusPktDescriptor::getArraySize(void *object, int field) const
     switch (field) {
         case 3: return pp->getRouteArraySize();
         case 4: return pp->getRouterArraySize();
-        case 6: return 3;
+        case 5: return 100;
+        case 6: return 100;
+        case 8: return 3;
         default: return 0;
     }
 }
@@ -433,8 +489,10 @@ std::string GreedyPlusPktDescriptor::getFieldAsString(void *object, int field, i
         case 2: {std::stringstream out; out << pp->getBaseNode(); return out.str();}
         case 3: return oppstring2string(pp->getRoute(i));
         case 4: {std::stringstream out; out << pp->getRouter(i); return out.str();}
-        case 5: return double2string(pp->getLength());
-        case 6: return double2string(pp->getBaseLineFactor(i));
+        case 5: return bool2string(pp->getTracker(i));
+        case 6: return bool2string(pp->getRepeat(i));
+        case 7: return double2string(pp->getLength());
+        case 8: return double2string(pp->getBaseLineFactor(i));
         default: return "";
     }
 }
@@ -450,8 +508,10 @@ bool GreedyPlusPktDescriptor::setFieldAsString(void *object, int field, int i, c
     GreedyPlusPkt *pp = (GreedyPlusPkt *)object; (void)pp;
     switch (field) {
         case 3: pp->setRoute(i,(value)); return true;
-        case 5: pp->setLength(string2double(value)); return true;
-        case 6: pp->setBaseLineFactor(i,string2double(value)); return true;
+        case 5: pp->setTracker(i,string2bool(value)); return true;
+        case 6: pp->setRepeat(i,string2bool(value)); return true;
+        case 7: pp->setLength(string2double(value)); return true;
+        case 8: pp->setBaseLineFactor(i,string2double(value)); return true;
         default: return false;
     }
 }

@@ -1,791 +1,98 @@
 version 2
-run GreedyPlus-0-20160523-02:00:35-4080
+run GreedyPlus-0-20160525-02:44:21-4736
 attr configname GreedyPlus
-attr datetime 20160523-02:00:35
+attr datetime 20160525-02:44:21
 attr experiment GreedyPlus
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
-attr network GeoRoutingNetwork1
-attr processid 4080
+attr network GeoRoutingNetwork502
+attr processid 4736
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-scalar GeoRoutingNetwork1.node1.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node2.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node3.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node4.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node5.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node6.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node7.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node8.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node9.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node10.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node11.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node12.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node13.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node14.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node15.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node16.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node17.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node18.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbTxFrames 	99
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbRxFrames 	0
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node1.nic.mac 	meanBackoff 	0.0013552941176471
-scalar GeoRoutingNetwork1.node1.nic.mac 	nbBackoffs 	119
-scalar GeoRoutingNetwork1.node1.nic.mac 	backoffDurations 	0.16128
-scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithInterference 	15
-scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithoutInterference 	110
-scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithInterferencePartial 	2
-scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node1.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node1.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node1.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node1.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node1.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node1.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node1.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node1.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node1.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node1.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node1.batteryStats 	total 	0.83999776000047
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node1.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node1.batteryStats 	"Mean power consumption" 	1.8647389358539
-attr unit  mW
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbTxFrames 	85
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbRxFrames 	0
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node2.nic.mac 	meanBackoff 	0.0016436363636364
-scalar GeoRoutingNetwork1.node2.nic.mac 	nbBackoffs 	110
-scalar GeoRoutingNetwork1.node2.nic.mac 	backoffDurations 	0.1808
-scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithInterference 	20
-scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithoutInterference 	134
-scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithInterferencePartial 	1
-scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithInterferenceDropped 	1
-scalar GeoRoutingNetwork1.node2.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node2.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node2.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node2.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node2.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node2.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node2.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node2.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node2.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node2.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node2.batteryStats 	total 	0.84097216000038
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node2.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node2.batteryStats 	"Mean power consumption" 	1.8669020387875
-attr unit  mW
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbTxFrames 	89
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbRxFrames 	0
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node3.nic.mac 	meanBackoff 	0.0015461946902655
-scalar GeoRoutingNetwork1.node3.nic.mac 	nbBackoffs 	113
-scalar GeoRoutingNetwork1.node3.nic.mac 	backoffDurations 	0.17472
-scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithInterference 	9
-scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithoutInterference 	109
-scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithInterferenceDropped 	1
-scalar GeoRoutingNetwork1.node3.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node3.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node3.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node3.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node3.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node3.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node3.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node3.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node3.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node3.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node3.batteryStats 	total 	0.84069216000043
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node3.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node3.batteryStats 	"Mean power consumption" 	1.8662804574848
-attr unit  mW
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbTxFrames 	83
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbRxFrames 	22
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node4.nic.mac 	meanBackoff 	0.0014133333333333
-scalar GeoRoutingNetwork1.node4.nic.mac 	nbBackoffs 	108
-scalar GeoRoutingNetwork1.node4.nic.mac 	backoffDurations 	0.15264
-scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithInterference 	15
-scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithoutInterference 	132
-scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node4.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node4.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node4.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node4.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node4.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node4.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node4.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node4.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node4.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node4.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node4.batteryStats 	total 	0.84110880000048
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node4.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node4.batteryStats 	"Mean power consumption" 	1.8672053704635
-attr unit  mW
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbTxFrames 	30
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbRxFrames 	8
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node5.nic.mac 	meanBackoff 	0.0017066666666667
-scalar GeoRoutingNetwork1.node5.nic.mac 	nbBackoffs 	36
-scalar GeoRoutingNetwork1.node5.nic.mac 	backoffDurations 	0.06144
-scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithInterference 	7
-scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithoutInterference 	48
-scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node5.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node5.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node5.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node5.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node5.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node5.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node5.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node5.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node5.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node5.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node5.batteryStats 	total 	0.84478912000012
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node5.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node5.batteryStats 	"Mean power consumption" 	1.8753754351072
-attr unit  mW
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbTxFrames 	46
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbRxFrames 	91
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node6.nic.mac 	meanBackoff 	0.0013614545454545
-scalar GeoRoutingNetwork1.node6.nic.mac 	nbBackoffs 	55
-scalar GeoRoutingNetwork1.node6.nic.mac 	backoffDurations 	0.07488
-scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithInterference 	21
-scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithoutInterference 	115
-scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node6.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node6.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node6.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node6.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node6.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node6.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node6.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node6.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node6.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node6.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node6.batteryStats 	total 	0.84367808000036
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node6.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node6.batteryStats 	"Mean power consumption" 	1.8729090004981
-attr unit  mW
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbTxFrames 	74
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbRxFrames 	20
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node7.nic.mac 	meanBackoff 	0.0016172043010753
-scalar GeoRoutingNetwork1.node7.nic.mac 	nbBackoffs 	93
-scalar GeoRoutingNetwork1.node7.nic.mac 	backoffDurations 	0.1504
-scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithInterference 	10
-scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithoutInterference 	114
-scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node7.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node7.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node7.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node7.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node7.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node7.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node7.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node7.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node7.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node7.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node7.batteryStats 	total 	0.84173376000044
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node7.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node7.batteryStats 	"Mean power consumption" 	1.8685927399314
-attr unit  mW
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbTxFrames 	90
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbRxFrames 	6
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node8.nic.mac 	meanBackoff 	0.0014457142857143
-scalar GeoRoutingNetwork1.node8.nic.mac 	nbBackoffs 	112
-scalar GeoRoutingNetwork1.node8.nic.mac 	backoffDurations 	0.16192
-scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithInterference 	17
-scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithoutInterference 	119
-scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithInterferenceDropped 	1
-scalar GeoRoutingNetwork1.node8.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node8.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node8.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node8.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node8.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node8.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node8.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node8.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node8.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node8.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node8.batteryStats 	total 	0.84062272000051
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node8.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node8.batteryStats 	"Mean power consumption" 	1.8661263053219
-attr unit  mW
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbTxFrames 	86
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbRxFrames 	12
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node9.nic.mac 	meanBackoff 	0.0016
-scalar GeoRoutingNetwork1.node9.nic.mac 	nbBackoffs 	104
-scalar GeoRoutingNetwork1.node9.nic.mac 	backoffDurations 	0.1664
-scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithInterference 	20
-scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithoutInterference 	122
-scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node9.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node9.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node9.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node9.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node9.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node9.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node9.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node9.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node9.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node9.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node9.batteryStats 	total 	0.8409004800003
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node9.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node9.batteryStats 	"Mean power consumption" 	1.8667429139738
-attr unit  mW
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbTxFrames 	33
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbRxFrames 	13
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node10.nic.mac 	meanBackoff 	0.0012331707317073
-scalar GeoRoutingNetwork1.node10.nic.mac 	nbBackoffs 	41
-scalar GeoRoutingNetwork1.node10.nic.mac 	backoffDurations 	0.05056
-scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithInterference 	3
-scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithoutInterference 	52
-scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node10.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node10.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node10.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node10.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node10.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node10.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node10.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node10.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node10.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node10.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node10.batteryStats 	total 	0.84458080000007
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node10.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node10.batteryStats 	"Mean power consumption" 	1.8749129786178
-attr unit  mW
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbTxFrames 	6
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbRxFrames 	150
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node11.nic.mac 	meanBackoff 	0.00112
-scalar GeoRoutingNetwork1.node11.nic.mac 	nbBackoffs 	10
-scalar GeoRoutingNetwork1.node11.nic.mac 	backoffDurations 	0.0112
-scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithInterference 	10
-scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithoutInterference 	149
-scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithInterferenceDropped 	1
-scalar GeoRoutingNetwork1.node11.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node11.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node11.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node11.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node11.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node11.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node11.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node11.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node11.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node11.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node11.batteryStats 	total 	0.84645568000005
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node11.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node11.batteryStats 	"Mean power consumption" 	1.8790750870215
-attr unit  mW
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbTxFrames 	34
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbRxFrames 	11
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node12.nic.mac 	meanBackoff 	0.00128
-scalar GeoRoutingNetwork1.node12.nic.mac 	nbBackoffs 	42
-scalar GeoRoutingNetwork1.node12.nic.mac 	backoffDurations 	0.05376
-scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithInterference 	4
-scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithoutInterference 	49
-scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node12.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node12.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node12.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node12.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node12.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node12.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node12.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node12.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node12.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node12.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node12.batteryStats 	total 	0.84451136000018
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node12.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node12.batteryStats 	"Mean power consumption" 	1.8747588264549
-attr unit  mW
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbTxFrames 	34
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbRxFrames 	1
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node13.nic.mac 	meanBackoff 	0.0013412765957447
-scalar GeoRoutingNetwork1.node13.nic.mac 	nbBackoffs 	47
-scalar GeoRoutingNetwork1.node13.nic.mac 	backoffDurations 	0.06304
-scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithInterference 	4
-scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithoutInterference 	50
-scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node13.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node13.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node13.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node13.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node13.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node13.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node13.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node13.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node13.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node13.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node13.batteryStats 	total 	0.84451136000021
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node13.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node13.batteryStats 	"Mean power consumption" 	1.874758826455
-attr unit  mW
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbTxFrames 	6
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbRxFrames 	163
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node14.nic.mac 	meanBackoff 	0.00128
-scalar GeoRoutingNetwork1.node14.nic.mac 	nbBackoffs 	6
-scalar GeoRoutingNetwork1.node14.nic.mac 	backoffDurations 	0.00768
-scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithInterference 	7
-scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithoutInterference 	160
-scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node14.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node14.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node14.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node14.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node14.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node14.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node14.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node14.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node14.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node14.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node14.batteryStats 	total 	0.84645568000002
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node14.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node14.batteryStats 	"Mean power consumption" 	1.8790750870214
-attr unit  mW
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbTxFrames 	6
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbRxFrames 	161
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node15.nic.mac 	meanBackoff 	0.0014577777777778
-scalar GeoRoutingNetwork1.node15.nic.mac 	nbBackoffs 	9
-scalar GeoRoutingNetwork1.node15.nic.mac 	backoffDurations 	0.01312
-scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithInterference 	10
-scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithoutInterference 	158
-scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithInterferenceDropped 	1
-scalar GeoRoutingNetwork1.node15.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node15.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node15.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node15.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node15.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node15.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node15.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node15.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node15.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node15.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node15.batteryStats 	total 	0.84645568000005
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node15.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node15.batteryStats 	"Mean power consumption" 	1.8790750870215
-attr unit  mW
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbTxFrames 	32
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbRxFrames 	3
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node16.nic.mac 	meanBackoff 	0.0015410526315789
-scalar GeoRoutingNetwork1.node16.nic.mac 	nbBackoffs 	38
-scalar GeoRoutingNetwork1.node16.nic.mac 	backoffDurations 	0.05856
-scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithInterference 	9
-scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithoutInterference 	42
-scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node16.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node16.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node16.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node16.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node16.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node16.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node16.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node16.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node16.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node16.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node16.batteryStats 	total 	0.84465024000016
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node16.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node16.batteryStats 	"Mean power consumption" 	1.8750671307811
-attr unit  mW
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbTxFrames 	34
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbRxFrames 	14
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node17.nic.mac 	meanBackoff 	0.0012627027027027
-scalar GeoRoutingNetwork1.node17.nic.mac 	nbBackoffs 	37
-scalar GeoRoutingNetwork1.node17.nic.mac 	backoffDurations 	0.04672
-scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithInterference 	5
-scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithoutInterference 	55
-scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node17.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node17.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node17.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node17.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node17.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node17.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node17.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node17.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node17.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node17.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node17.batteryStats 	total 	0.84451136000013
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node17.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node17.batteryStats 	"Mean power consumption" 	1.8747588264548
-attr unit  mW
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbTxFrames 	36
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbRxFrames 	1
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbDroppedFrames 	0
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbMissedAcks 	0
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbRecvdAcks 	0
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbTxAcks 	0
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbDuplicates 	0
-scalar GeoRoutingNetwork1.node18.nic.mac 	meanBackoff 	0.0014618181818182
-scalar GeoRoutingNetwork1.node18.nic.mac 	nbBackoffs 	44
-scalar GeoRoutingNetwork1.node18.nic.mac 	backoffDurations 	0.06432
-scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithInterference 	6
-scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithoutInterference 	50
-scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithInterferencePartial 	0
-scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithoutInterferencePartial 	0
-scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node18.nic.phy 	nbFramesWithoutInterferenceDropped 	0
-scalar GeoRoutingNetwork1.node18.tranl 	nbAggrPktReceived 	0
-scalar GeoRoutingNetwork1.node18.tranl 	"nbAggrPktSentDown " 	0
-scalar GeoRoutingNetwork1.node18.appl 	"activity duration" 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node18.appl 	firstPacketGeneration 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node18.appl 	lastPacketReception 	-2
-attr unit  s
-scalar GeoRoutingNetwork1.node18.appl 	nbPacketsSent 	0
-scalar GeoRoutingNetwork1.node18.appl 	nbPacketsReceived 	0
-statistic GeoRoutingNetwork1.node18.appl 	latency
-field count 0
-field mean nan
-field stddev nan
-field sum 0
-field sqrsum 0
-field min nan
-field max nan
-scalar GeoRoutingNetwork1.node18.batteryStats 	nominal 	180
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node18.batteryStats 	total 	0.84437248000015
-attr unit  mW-s
-scalar GeoRoutingNetwork1.node18.batteryStats 	lifetime 	-1
-attr unit  s
-scalar GeoRoutingNetwork1.node18.batteryStats 	"Mean power consumption" 	1.8744505221286
-attr unit  mW
+scalar GeoRoutingNetwork502.node1.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node2.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node3.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node4.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node5.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node6.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node7.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node8.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node9.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node10.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node11.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node12.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node13.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node14.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node15.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node16.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node17.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node18.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node19.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node20.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node21.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node22.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node23.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node24.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node25.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node26.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node27.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node28.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node29.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node30.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node31.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node32.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node33.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node34.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node35.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node36.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node37.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node38.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node39.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node40.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node41.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node42.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node43.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node44.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node45.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node46.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node47.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node48.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node49.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node50.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node51.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node52.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node53.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node54.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node55.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node56.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node57.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node58.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node59.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node60.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node61.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node62.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node63.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node64.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node65.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node66.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node67.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node68.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node69.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node70.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node71.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node72.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node73.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node74.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node75.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node76.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node77.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node78.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node79.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node80.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork502.node81.netwl 	"Initial Power" 	180

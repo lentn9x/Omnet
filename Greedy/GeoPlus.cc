@@ -302,7 +302,6 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                           << endl;
                 EV << "Bat dau gui goi Greedy" << endl;
             }
-
         }
     }
 
@@ -316,10 +315,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
         EV << "ID Node tiep theo: " << greedyPlusPkt->getInterNode().nodeID
                   << endl;
 
-        for (int i = 0; i < routerSize - 1; i++) {
-            EV << "node" << greedyPlusPkt->getRouter(i).nodeID << ", ";
-        }
-        EV << "node" << greedyPlusPkt->getRouter(0).nodeID << endl;
+
 
 // <--------------------------------------------------------------------------->
 
@@ -336,36 +332,37 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                 EV << "vao den day roi, routerSize = " << routerSize << endl;
                 if ((greedyPlusPkt->getBaseNode() == myNode)
                         && (routerSize > 5)) {
-                    EV << "ok: " << endl;
-//                    for (int i = 0; i < routerSize - 1; i++) {
-//                        if (check[greedyPlusPkt->getRouter(i).nodeID - 3]
-//                                == true) {
-//                            check[greedyPlusPkt->getRouter(i).nodeID - 3] =
-//                                    false;
-//                        } else {
-//                            break;
-//                            checkout = false;
+                    for (i = 0; i < routerSize; i++)
+                    if (check[greedyPlusPkt->getRouter(i).nodeID] == true) {
+                        check[greedyPlusPkt->getRouter(i).nodeID] = false;
+                    } else {
+                        checkout = false;
+                    }
+//                    int t=0;
+//                    for (i = 0; i < routerSize - 1; i++){
+//                        int p = greedyPlusPkt->getRouter(i).nodeID;
+//                        if (greedyPlusPkt->getTracker(p) == 1){
+//                           t++;
 //                        }
 //                    }
-//                    if (checkout == false) {
-//                        delete (greedyPlusPkt);
+//                    if (t == routerSize - 1) {
+//                        checkout == false;
 //                    }
+                    if (checkout == true){
+                    EV << "ok: " << endl;
                     for (i = 0; i < routerSize - 1; i++) {
-                        EV << "node" << greedyPlusPkt->getRouter(i).nodeID
+                        EV << "node" << greedyPlusPkt->getRouter(i).nodeID - 3
                                   << ", ";
+                        int p = greedyPlusPkt->getRouter(i).nodeID;
+                       // greedyPlusPkt->setTracker(p) = 1;
                     }
-                    EV << "node" << greedyPlusPkt->getRouter(i).nodeID << endl;
+                    EV << "node" << greedyPlusPkt->getRouter(i).nodeID - 3 << endl;
+                    }
 //                endSimulation();
                 } else {
-                    EV << "process: " << endl;
-                    for (int i = 0; i < routerSize; i++) {
-                        EV << greedyPlusPkt->getRouter(i).nodeID - 3 << "-";
-                    }
-                    EV << endl;
                     GeoNode* interNode = findNextNode(
                             greedyPlusPkt->getDestNode());
 
-                    EV << "I'm here" << endl;
                     cObject * const pCtrlInfo =
                             greedyPlusPkt->removeControlInfo();
                     if (pCtrlInfo != NULL) {

@@ -30,6 +30,8 @@
  *     GeoNode baseNode;
  *     string route[];
  *     GeoNode router[];
+ *     bool tracker[100];
+ *     bool repeat[100];
  *     double length = 0;
  *     double baseLineFactor[3];
  * }
@@ -45,6 +47,8 @@ class GreedyPlusPkt : public ::NetwPkt
     unsigned int route_arraysize;
     GeoNode *router_var; // array ptr
     unsigned int router_arraysize;
+    bool tracker_var[100];
+    bool repeat_var[100];
     double length_var;
     double baseLineFactor_var[3];
 
@@ -83,6 +87,12 @@ class GreedyPlusPkt : public ::NetwPkt
     virtual GeoNode& getRouter(unsigned int k);
     virtual const GeoNode& getRouter(unsigned int k) const {return const_cast<GreedyPlusPkt*>(this)->getRouter(k);}
     virtual void setRouter(unsigned int k, const GeoNode& router);
+    virtual unsigned int getTrackerArraySize() const;
+    virtual bool getTracker(unsigned int k) const;
+    virtual void setTracker(unsigned int k, bool tracker);
+    virtual unsigned int getRepeatArraySize() const;
+    virtual bool getRepeat(unsigned int k) const;
+    virtual void setRepeat(unsigned int k, bool repeat);
     virtual double getLength() const;
     virtual void setLength(double length);
     virtual unsigned int getBaseLineFactorArraySize() const;

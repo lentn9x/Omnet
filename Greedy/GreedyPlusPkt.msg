@@ -13,6 +13,8 @@ message GreedyPlusPkt extends NetwPkt
     GeoNode baseNode;
     string route[];
     GeoNode router[];
+    bool tracker[100];
+    bool repeat[100];
     double length = 0;
     double baseLineFactor[3];
 }
