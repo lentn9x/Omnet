@@ -1,98 +1,99 @@
 version 2
-run GreedyPlus-0-20160525-02:44:21-4736
+run GreedyPlus-0-20160601-22:35:30-1660
 attr configname GreedyPlus
-attr datetime 20160525-02:44:21
+attr datetime 20160601-22:35:30
 attr experiment GreedyPlus
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
-attr network GeoRoutingNetwork502
-attr processid 4736
+attr network GeoRoutingNetwork501
+attr processid 1660
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-scalar GeoRoutingNetwork502.node1.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node2.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node3.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node4.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node5.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node6.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node7.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node8.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node9.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node10.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node11.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node12.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node13.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node14.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node15.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node16.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node17.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node18.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node19.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node20.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node21.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node22.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node23.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node24.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node25.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node26.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node27.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node28.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node29.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node30.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node31.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node32.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node33.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node34.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node35.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node36.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node37.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node38.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node39.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node40.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node41.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node42.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node43.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node44.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node45.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node46.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node47.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node48.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node49.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node50.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node51.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node52.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node53.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node54.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node55.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node56.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node57.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node58.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node59.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node60.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node61.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node62.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node63.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node64.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node65.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node66.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node67.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node68.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node69.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node70.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node71.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node72.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node73.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node74.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node75.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node76.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node77.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node78.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node79.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node80.netwl 	"Initial Power" 	180
-scalar GeoRoutingNetwork502.node81.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node1.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node2.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node3.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node4.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node5.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node6.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node7.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node8.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node9.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node10.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node11.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node12.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node13.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node14.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node15.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node16.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node17.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node18.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node19.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node20.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node21.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node22.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node23.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node24.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node25.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node26.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node27.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node28.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node29.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node30.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node31.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node32.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node33.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node34.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node35.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node36.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node37.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node38.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node39.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node40.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node41.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node42.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node43.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node44.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node45.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node46.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node47.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node48.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node49.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node50.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node51.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node52.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node53.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node54.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node55.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node56.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node57.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node58.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node59.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node60.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node61.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node62.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node63.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node64.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node65.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node66.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node67.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node68.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node69.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node70.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node71.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node72.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node73.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node74.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node75.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node76.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node77.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node78.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node79.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node80.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node81.netwl 	"Initial Power" 	180
+scalar GeoRoutingNetwork501.node82.netwl 	"Initial Power" 	180

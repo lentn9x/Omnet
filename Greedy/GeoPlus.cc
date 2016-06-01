@@ -269,6 +269,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
             greedyPlusPkt->setRouteArraySize(1);
             greedyPlusPkt->setRoute(0, getParentModule()->getName());
 
+
             for (int i = 0; i < couple; i++) {
 
                 GreedyPlusPkt* clone = (GreedyPlusPkt*) greedyPlusPkt->dup();
@@ -300,7 +301,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                 EV << "Node ID: " << myNode.nodeID << endl;
                 EV << "ID node tiep theo: " << clone->getInterNode().nodeID
                           << endl;
-                EV << "Bat dau gui goi Greedy" << endl;
+                EV << "Bat dau gui goi Coverage" << endl;
             }
         }
     }
@@ -310,7 +311,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
         unsigned int routeSize = greedyPlusPkt->getRouteArraySize(), i;
         unsigned int routerSize = greedyPlusPkt->getRouterArraySize(), j;
 
-        EV << "Nhan goi tin GreedyPlus" << endl;
+        EV << "Nhan goi tin Coverage" << endl;
         EV << "Node ID: " << myNode.nodeID << endl;
         EV << "ID Node tiep theo: " << greedyPlusPkt->getInterNode().nodeID
                   << endl;
@@ -329,7 +330,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                 check[i] = true;
             }
             {
-                EV << "vao den day roi, routerSize = " << routerSize << endl;
+                EV << "RouterSize = " << routerSize << endl;
                 if ((greedyPlusPkt->getBaseNode() == myNode)
                         && (routerSize > 5)) {
                     for (i = 0; i < routerSize; i++)
@@ -338,18 +339,21 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
                     } else {
                         checkout = false;
                     }
-//                    int t=0;
-//                    for (i = 0; i < routerSize - 1; i++){
-//                        int p = greedyPlusPkt->getRouter(i).nodeID;
-//                        if (greedyPlusPkt->getTracker(p) == 1){
-//                           t++;
+
+
+
+//                    int j;
+//                    for (i = 2; i < routerSize-2; i++) {
+//                        j = greedyPlusPkt->getRouter(i).nodeID;
+//                            double d = myNode.distant(nbTable[1], nbTable[j]);
+//                        if (d < 2*r) {
+//                            checkout = false;
+//                            break;
 //                        }
 //                    }
-//                    if (t == routerSize - 1) {
-//                        checkout == false;
-//                    }
+
                     if (checkout == true){
-                    EV << "ok: " << endl;
+                    EV << "Ho cam bien Coverage ok : " << endl;
                     for (i = 0; i < routerSize - 1; i++) {
                         EV << "node" << greedyPlusPkt->getRouter(i).nodeID - 3
                                   << ", ";
@@ -407,7 +411,7 @@ void GeoPlus::handleLowerMsg(cMessage* msg) {
 
                         setDownControlInfo(clone, LAddress::L2BROADCAST);
                         sendDown(clone);
-                        EV << "Chuyen tiep goi tin GreedyPlus" << endl;
+                        EV << "Chuyen tiep goi tin Coverage" << endl;
                     }
                 }
             }

@@ -34,6 +34,7 @@ protected:
     };
     double baseLineFactor[3],index[1000],shadow[1000],px1[1000],py1[1000],center[1000],count[1000],node1[1000],node2[1000];
     int couple;
+    int r = 48;
 public:
     GeoPlus() :
             BaseNetwLayer() {

@@ -148,7 +148,7 @@ network GeoRoutingNetwork5 extends BaseNetwork
             @display("p=328,590;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node47: Host802154 {
-            @display("p=582,457;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=549,406;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node48: Host802154 {
             @display("p=498,687;i=misc/node2,,0;b=3,5;is=vs;i2=-");
@@ -178,13 +178,13 @@ network GeoRoutingNetwork5 extends BaseNetwork
             @display("p=434,446;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node57: Host802154 {
-            @display("p=651,547;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=666,581;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node58: Host802154 {
-            @display("p=792,587;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=736,658;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node59: Host802154 {
-            @display("p=885,650;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=736,596;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node60: Host802154 {
             @display("p=212,786;i=misc/node2,,0;b=3,5;is=vs;i2=-");
@@ -202,7 +202,7 @@ network GeoRoutingNetwork5 extends BaseNetwork
             @display("p=59,801;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node65: Host802154 {
-            @display("p=813,744;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+            @display("p=876,694;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
         node66: Host802154 {
             @display("p=619,786;i=misc/node2,,0;b=3,5;is=vs;i2=-");
@@ -257,6 +257,57 @@ network GeoRoutingNetwork5 extends BaseNetwork
         }
         node84: Host802154 {
             @display("p=183,246;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node75: Host802154 {
+            @display("p=343,406;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node85: Host802154 {
+            @display("p=535,504;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node86: Host802154 {
+            @display("p=726,519;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node87: Host802154 {
+            @display("p=597,179;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node88: Host802154 {
+            @display("p=458,149;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node89: Host802154 {
+            @display("p=558,298;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node90: Host802154 {
+            @display("p=634,488;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node91: Host802154 {
+            @display("p=798,786;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node92: Host802154 {
+            @display("p=850,587;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node93: Host802154 {
+            @display("p=917,384;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node94: Host802154 {
+            @display("p=840,253;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node95: Host802154 {
+            @display("p=798,94;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node96: Host802154 {
+            @display("p=520,767;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node97: Host802154 {
+            @display("p=59,737;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node98: Host802154 {
+            @display("p=336,694;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node99: Host802154 {
+            @display("p=358,988;i=misc/node2,,0;b=3,5;is=vs;i2=-");
+        }
+        node100: Host802154 {
+            @display("p=59,525;i=misc/node2,,0;b=3,5;is=vs;i2=-");
         }
     connections allowunconnected:
 		//	all connections and gates are to be generated dynamically
